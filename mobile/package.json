@@ -1,9 +1,9 @@
 {
-  "name": "cartner",
+  "name": "ekdp",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "scripts": {
-    "gulp ": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp"
   },
   "author": "",
   "license": "ISC",
