@@ -51,7 +51,7 @@
 
 .header_main_imgtitle{display:flex;align-items: center;height:100%;position:absolute;top:0;left:0;padding:0 15px;}
 .header_main_imglogo{display:inline-block;font-size:0;line-height:0;}
-.header_main_imglogo > img{width:118px;vertical-align: top;}
+.header_main_imglogo > img{width:145px;vertical-align: top;}
 
 .btn_mobile_menu{display:block;position:absolute;width:51px;height:51px;top:0;right:0;}
 .btn_mobile_menu_obj{
