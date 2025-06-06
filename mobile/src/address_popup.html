@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		@@include('./include/head.html')
+	</head>
+	<body class="admin_body">
+		 <div class="page_wrap">
+			@@include('./include/header_sub.html', {
+				page_sub: true,
+				sub_title: "우편번호찾기 팝업"
+			})
+            <!-- middle -->
+            <section class="middle_zone sub_type2">
+                내용이 들어갑니다.
+            </section>
+            <!-- // middle -->
+        </div>
+		
+		<!-- layer -->
+		<div class="dlayer_w" id="address_layer">
+			<div class="dlayer_bg"></div>
+			<div class="dlayer_box">
+				<div class="dlayer_tit_low"><h2 class="dlayer_tit">우편번호찾기 팝업</h2></div>
+				<div class="dlayer_cont_low">
+					<div class="dlay_sort_w">
+						<p class="dlsort_tit">주소 검색어</p>
+						<div class="dlsort_form_tb">
+							<div class="dlsort_form_td dlsort01"><input type="text" class="dlsort_int" value="영등포 여의나루"></div>
+							<div class="dlsort_form_td dlsort02"><a href="#" class="btn_dlsort">검색</a></div>
+							<div class="dlsort_form_td dlsort02"><a href="#" class="btn_dlsort">확인</a></div>
+						</div>
+					</div>
+					<div class="data_toptit_wrap">
+						<p class="dlsort_tit">주소 리스트</p>
+					</div>
+					<div class="data_tb_w">
+						<table class="data_tb">
+							<thead>
+								<tr>
+									<th class="has_wpsp"><span class="d_wpsp">선택</span></th>
+									<th class="has_wpsp"><span class="d_wpsp">우편번호</span></th>
+									<th class="has_norsp"><span class="d_norsp">도로명주소</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="has_wpsp has_ico">
+										<div class="rdchkitem oneitem">
+											<input type="checkbox" class="rdchk" id="rdchk_it01">
+											<label for="rdchk_it01" class="rdchk_lab"></label>
+										</div>
+									</td>
+									<td class="has_wpsp"><span class="d_wpsp">07336</span></td>
+									<td class="has_norsp txtleft"><span class="d_norsp">서울시 영등포 여의나루 1-5</span></td>
+								</tr>
+								<tr>
+									<td class="has_wpsp has_ico">
+										<div class="rdchkitem oneitem">
+											<input type="checkbox" class="rdchk" id="rdchk_it01">
+											<label for="rdchk_it01" class="rdchk_lab"></label>
+										</div>
+									</td>
+									<td class="has_wpsp"><span class="d_wpsp">07336</span></td>
+									<td class="has_norsp txtleft"><span class="d_norsp">서울시 영등포 여의나루 1-5</span></td>
+								</tr>
+								<tr>
+									<td class="has_wpsp has_ico">
+										<div class="rdchkitem oneitem">
+											<input type="checkbox" class="rdchk" id="rdchk_it01">
+											<label for="rdchk_it01" class="rdchk_lab"></label>
+										</div>
+									</td>
+									<td class="has_wpsp"><span class="d_wpsp">07336</span></td>
+									<td class="has_norsp txtleft"><span class="d_norsp">서울시 영등포 여의나루 1-5</span></td>
+								</tr>
+								<tr>
+									<td class="has_wpsp has_ico">
+										<div class="rdchkitem oneitem">
+											<input type="checkbox" class="rdchk" id="rdchk_it01">
+											<label for="rdchk_it01" class="rdchk_lab"></label>
+										</div>
+									</td>
+									<td class="has_wpsp"><span class="d_wpsp">07336</span></td>
+									<td class="has_norsp txtleft"><span class="d_norsp">서울시 영등포 여의나루 1-5</span></td>
+								</tr>
+								<tr>
+									<td class="has_wpsp has_ico">
+										<div class="rdchkitem oneitem">
+											<input type="checkbox" class="rdchk" id="rdchk_it01">
+											<label for="rdchk_it01" class="rdchk_lab"></label>
+										</div>
+									</td>
+									<td class="has_wpsp"><span class="d_wpsp">07336</span></td>
+									<td class="has_norsp txtleft"><span class="d_norsp">서울시 영등포 여의나루 1-5</span></td>
+								</tr>
+								<tr>
+									<td class="has_wpsp has_ico">
+										<div class="rdchkitem oneitem">
+											<input type="checkbox" class="rdchk" id="rdchk_it01">
+											<label for="rdchk_it01" class="rdchk_lab"></label>
+										</div>
+									</td>
+									<td class="has_wpsp"><span class="d_wpsp">07336</span></td>
+									<td class="has_norsp txtleft"><span class="d_norsp">서울시 영등포 여의나루 1-5</span></td>
+								</tr>
+								<tr>
+									<td class="nodata_td" colspan="3"><p class="nodata">데이터가 없습니다.</p></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="pagination">
+						<a href="#none" class="first">Go to first</a>
+						<a href="#none" class="prev">Go to prev</a>
+						<a href="#none" class="num on">1</a>
+						<a href="#none" class="num">2</a>
+						<a href="#none" class="num">3</a>
+						<a href="#none" class="num">4</a>
+						<a href="#none" class="num">5</a>
+						<a href="#none" class="next">Go to next</a>
+						<a href="#none" class="last">Go to last</a>
+					</div>
+				</div>
+				<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // layer -->
+		
+		<script>
+			dimLayerShow({ target : "#address_layer"});
+		</script>
+	</body>
+</html>

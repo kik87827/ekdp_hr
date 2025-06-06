@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="./css/reset.css" />
+	<link rel="stylesheet" href="./css/layout.css" />
+	<link rel="stylesheet" href="./css/contents.css" />
+	<script src="./js/jquery-3.6.0.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/ui.js"></script>
+	<title>KSA 한국표준협회</title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<!-- header -->
+		<header class="header_zone type3">
+			<a href="#" class="btn_top_home"><span class="hdtext">홈</span></a>
+
+			<h1 class="header_sub_title"><span class="header_sub_title_inner">급여명세서</span></h1>
+
+			<a href="#" class="btn_mobile_menu type2">
+				<div class="btn_mobile_menu_obj"></div>
+				<span class="hdtext">전체메뉴 열기</span>
+			</a>
+			<!-- mobile_menu -->
+			<div class="mobile_mainmenu_zone">
+				<div class="mainmenu_dim"></div>
+				<div class="mobile_mainmenu_wrap">
+					<div class="mbutil_low">
+						<!-- 로그인 전 -->
+						<!-- <ul class="mbutil_hlist">
+                <li><a href="#" class="mbutil">로그인</a></li>
+            </ul> -->
+						<!-- // 로그인 전 -->
+						<!-- 로그인 후 -->
+						<ul class="mbutil_hlist">
+							<li>
+								<a href="#" class="mbutil">로그아웃</a>
+							</li>
+						</ul>
+						<!-- // 로그인 후 -->
+					</div>
+					<div class="mbmenu_low">
+						<div class="mbmenu_inwrap">
+							<ul class="mbmenu_vlist">
+								<li><a href="#" class="mbmenu_one">MY인사</a></li>
+								<li><a href="#" class="mbmenu_one">승인요청</a></li>
+								<li><a href="#" class="mbmenu_one">승인대기</a></li>
+								<li><a href="#" class="mbmenu_one">근태현황</a></li>
+								<li><a href="#" class="mbmenu_one">근태신청</a></li>
+								<li><a href="#" class="mbmenu_one">복지지원비신청</a></li>
+								<li><a href="#" class="mbmenu_one">휴양시설</a></li>
+								<li><a href="#" class="mbmenu_one">급여명세서조회</a></li>
+								<li><a href="#" class="mbmenu_one">제증명신청</a></li>
+								<li><a href="#" class="mbmenu_one">임직원조회</a></li>
+							</ul>
+						</div>
+					</div>
+					<a href="#" class="btn_mbmenuclose">
+						<span class="hdtext">메인메뉴 닫기</span>
+					</a>
+				</div>
+			</div>
+			<!-- // mobile_menu -->
+		</header>
+		<!-- // header -->
+
+
+		<!-- middle -->
+		<section class="middle_zone">
+			<div class="view_contents_wrap">
+				<div class="dbox_group_zone">
+					<div class="dbox_group">
+						<div class="dbox">
+							<div class="dbox_title_row">
+								<p class="dbox_title">2021년 3월 정기급여</p>
+							</div>
+							<div class="dbox_content_row">
+								<div class="dprice_item_group">
+									<div class="dprice_item">
+										<span class="dprice_text">6,000,000</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="dbox dtype2">
+							<div class="dbox_title_row">
+								<p class="dbox_ico_item"><span class="dbox_ico_text">지급금액</span></p>
+							</div>
+							<div class="dbox_content_row">
+								<div class="dprice_item_group">
+									<div class="dprice_item type2">
+										<span class="dprice_text">12,579,445</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--  -->
+				<style>
+					/* cell width 조절 */
+					[name='pay_history_table'] .ctb_wid01 {
+						width: 40%;
+					}
+
+					[name='pay_history_table'] .ctb_wid02 {}
+
+					[name='pay_total_table'] .ctb_wid01 {
+						width: 60%;
+					}
+
+					[name='pay_total_table'] .ctb_wid02 {}
+
+					[name='pay_else_table'] .ctb_wid01 {
+						width: 20%;
+					}
+
+					[name='pay_else_table'] .ctb_wid02 {
+						width: 30%;
+					}
+
+					[name='pay_else_table'] .ctb_wid03 {}
+
+					[name='pay_else_table2'] .ctb_wid01 {
+						width: 25%;
+					}
+
+					[name='pay_else_table2'] .ctb_wid02 {}
+
+					/* 작은사이즈 폰 359 이하 */
+					@media(max-width:359px) {}
+				</style>
+				<div class="vertical_item_wrap">
+					<div class="vertical_item">
+						<div class="vertical_title_row">
+							<p class="pmid_ctit">지급내역</p>
+						</div>
+						<div class="vertical_content_row">
+							<div class="tbsk_tb_w">
+								<table class="tbsk_tb" name="pay_history_table">
+									<thead>
+										<tr>
+											<th class="ctb_wid01">항목</th>
+											<th class="ctb_wid02">금액</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="bg_type2"><span class="tb_data type_label">기본급</span></td>
+											<td class="align_right"><span class="tb_data">6,000,000</span></td>
+										</tr>
+										<tr>
+											<td class="bg_type2"><span class="tb_data type_label">휴일근로수당</span></td>
+											<td class="align_right"><span class="tb_data">0</span></td>
+										</tr>
+										<tr>
+											<td class="bg_type2"><span class="tb_data type_label">연장근로수당</span></td>
+											<td class="align_right"><span class="tb_data">0</span></td>
+										</tr>
+										<tr>
+											<td class="bg_type2"><span class="tb_data type_label">심야근로수당</span></td>
+											<td class="align_right"><span class="tb_data">0</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="total_data_wrap">
+								<div class="total_data">
+									<span class="total_data_label">지급 총액 :</span>
+									<div class="total_data_value">6,000,0000</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="vertical_item">
+						<div class="vertical_title_row">
+							<p class="pmid_ctit">공제내역</p>
+						</div>
+						<div class="vertical_content_row">
+							<div class="tbsk_tb_w">
+								<table class="tbsk_tb" name="pay_history_table">
+									<thead>
+										<tr>
+											<th class="ctb_wid01">항목</th>
+											<th class="ctb_wid02">금액</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="bg_type2"><span class="tb_data type_label">급여가압류</span></td>
+											<td class="align_right"><span class="tb_data">2,500,000</span></td>
+										</tr>
+										<tr>
+											<td class="bg_type2"><span class="tb_data type_label">고용보험</span></td>
+											<td class="align_right"><span class="tb_data">3,000</span></td>
+										</tr>
+										<tr>
+											<td class="bg_type2"><span class="tb_data type_label">갑근세</span></td>
+											<td class="align_right"><span class="tb_data">1,000,000</span></td>
+										</tr>
+										<tr>
+											<td class="bg_type2"><span class="tb_data type_label">주민세</span></td>
+											<td class="align_right"><span class="tb_data">5,000</span></td>
+										</tr>
+										<tr>
+											<td class="bg_type2"><span class="tb_data type_label">연말갑근세</span></td>
+											<td class="align_right"><span class="tb_data">230,000</span></td>
+										</tr>
+										<tr>
+											<td class="bg_type2"><span class="tb_data type_label">연말주민세</span></td>
+											<td class="align_right"><span class="tb_data">2,000</span></td>
+										</tr>
+										<tr>
+											<td class="bg_type2"><span class="tb_data type_label">신협출자금</span></td>
+											<td class="align_right"><span class="tb_data">0</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="total_data_wrap">
+								<div class="total_data">
+									<span class="total_data_label">소계 :</span>
+									<div class="total_data_value">3,000,0000</div>
+								</div>
+								<div class="total_data">
+									<span class="total_data_label">실수령액 :</span>
+									<div class="total_data_value">6,000,0000</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="vertical_item">
+						<div class="vertical_title_row">
+							<p class="pmid_ctit">근로 상세 내역</p>
+						</div>
+						<div class="vertical_content_row">
+							<div class="tbsk_tb_w">
+								<table class="tbsk_tb" name="pay_total_table">
+									<tbody>
+										<tr>
+											<td class="ctb_wid01 bg_type2"><span class="tb_data type_label">총 근로일 수</span></td>
+											<td class="ctb_wid02"><span class="tb_data">21</span></td>
+										</tr>
+										<tr>
+											<td class="ctb_wid01 bg_type2"><span class="tb_data type_label">총 근로시간</span></td>
+											<td class="ctb_wid02"><span class="tb_data">171:09</span></td>
+										</tr>
+										<tr>
+											<td class="ctb_wid01 bg_type2"><span class="tb_data type_label">연장근로시간</span></td>
+											<td class="ctb_wid02"><span class="tb_data">004:43</span></td>
+										</tr>
+										<tr>
+											<td class="ctb_wid01 bg_type2"><span class="tb_data type_label">연장근로 보상시간</span></td>
+											<td class="ctb_wid02"><span class="tb_data">004:43</span></td>
+										</tr>
+										<tr>
+											<td class="ctb_wid01 bg_type2"><span class="tb_data type_label">휴일근로시간</span></td>
+											<td class="ctb_wid02"><span class="tb_data">000:00</span></td>
+										</tr>
+										<tr>
+											<td class="ctb_wid01 bg_type2"><span class="tb_data type_label">휴일근로 보상시간</span></td>
+											<td class="ctb_wid02"><span class="tb_data">000:00</span></td>
+										</tr>
+										<tr>
+											<td class="ctb_wid01 bg_type2"><span class="tb_data type_label">야간근로시간</span></td>
+											<td class="ctb_wid02"><span class="tb_data">000:00</span></td>
+										</tr>
+										<tr>
+											<td class="ctb_wid01 bg_type2"><span class="tb_data type_label">야간보상시간</span></td>
+											<td class="ctb_wid02"><span class="tb_data">000:00</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="vertical_item">
+						<div class="vertical_content_row">
+							<div class="tbsk_tb_w">
+								<table class="tbsk_tb" name="pay_else_table">
+									<thead>
+										<tr>
+											<th class="ctb_wid01">근속년수</th>
+											<th class="ctb_wid02">기본근무시간</th>
+											<th class="ctb_wid03">초과(연장/휴일) 근로시간</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="ctb_wid01"><span class="tb_data">35</span></td>
+											<td class="ctb_wid02"><span class="tb_data">209</span></td>
+											<td class="ctb_wid03"><span class="tb_data">5</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="total_data_wrap">
+								<div class="total_data">
+									<span class="total_data_label">통상임금 :</span>
+									<div class="total_data_value">4,858,000</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="vertical_item">
+						<div class="vertical_content_row">
+							<div class="tbsk_tb_w">
+								<table class="tbsk_tb" name="pay_else_table2">
+									<thead>
+										<tr>
+											<th class="ctb_wid01">구분</th>
+											<th class="ctb_wid02">산출식 또는 산출방법</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="ctb_wid01"><span class="tb_data">가족수당</span></td>
+											<td class="ctb_wid02 align_left"><span class="tb_data">가족수당대상수 * 30,000(대상수:1명)</span></td>
+										</tr>
+										<tr>
+											<td class="ctb_wid01"><span class="tb_data">근속수당</span></td>
+											<td class="ctb_wid02 align_left"><span class="tb_data">근속년수 * 8000<br>(단, 임금피크자는 임금피크 시작전년도 12월 근속수당으로 고정)</span></td>
+										</tr>
+										<tr>
+											<td class="ctb_wid01"><span class="tb_data">초과근무수당</span></td>
+											<td class="ctb_wid02 align_left"><span class="tb_data">(통상임금 / 기본근무시간) * 초과근무시간 * 1.5</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="bullet_list dash">
+								<li>일할계산식 : 만근시 지급액 / 30일(월의 대소불문) * 근무일수</li>
+							</ul>
+						</div>
+					</div>
+					<div class="vertical_item">
+						<div class="message_copy_group">
+							<span class="message_copy">If you have any questions, Please email</span>
+							<a href="mailto:hjs@ksa.or.kr" class="message_copy has_ico">
+								<span class="message_copy_text">HR 담당자 hjs@ksa.or.kr</span>
+							</a>
+						</div>
+					</div>
+					<div class="vertical_item">
+						<div class="card_obj_box">
+							<div class="card_obj_key_row">
+								<p class="card_obj_key_title">
+									<span class="card_obj_key_text">News & Notice</span>
+								</p>
+							</div>
+							<div class="card_obj_value_row">
+								<ul class="get_board_data_list">
+									<li>
+										<a href="#" class="get_board_data">
+											2022년 귀속건강보험 연말정산 보험료 분할공제
+										</a>
+									</li>
+									<li>
+										<a href="#" class="get_board_data">
+											2022년 귀속건강보험 연말정산 보험료 분할공제 2022년 귀속건강보험 연말정산 보험료 분할공제 2022년 귀속건강보험 연말정산 보험료 분할공제
+										</a>
+									</li>
+									<li>
+										<a href="#" class="get_board_data">
+											2022년 귀속건강보험 연말정산 보험료 분할공제
+										</a>
+									</li>
+									<li>
+										<a href="#" class="get_board_data">
+											2022년 귀속건강보험 연말정산 보험료 분할공제 2022년 귀속건강보험 연말정산 보험료 분할공제 2022년 귀속건강보험 연말정산 보험료 분할공제
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="message_para_group">
+							<i class="ico_message_para"></i>
+							<span class="message_para">귀하의 노고에 진심으로 감사드립니다</span>
+						</div>
+					</div>
+				</div>
+				<!-- // -->
+			</div>
+		</section>
+		<!-- // middle -->
+	</div>
+</body>
+
+</html>

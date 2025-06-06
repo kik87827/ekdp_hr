@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('./include/head.html')
+    <body class="front_body">
+        <div class="page_wrap">
+            @@include('./include/header_sub.html', {
+				page_sub: true,
+				sub_title: "국내출장신청"
+			})
+
+            <!-- middle -->
+            <section class="middle_zone">
+                <div class="form_field_item_zone">
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <div class="form_field_title_row type2">
+                                <p class="form_field_title">결재선</p>
+                                <a href="javascript:;" class="btn_csm type3">결재선 지정</a>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="tbsk_tb_w">
+									<table class="tbsk_tb">
+										<thead>
+											<tr>
+												<th class="ctb_w01">구분</th>
+												<th class="ctb_w02">성명</th>
+												<th class="ctb_w03">상태</th>
+												<th class="ctb_w04">결재완료일</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>기안</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+											<tr>
+												<th>결재라인</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+											<tr>
+												<th>수신자</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+                            </div>
+                        </div>
+                        <div class="form_field_item else_margin">
+                            <div class="fvtb_w type3">
+                                 <table class="fvtb">
+                                     <tbody>
+                                         <tr>
+                                             <th class="has_fvth_sp"><span class="fvth_sp imp">신청자</span></th>
+                                             <td class="has_fitem"><input type="text" class="fvint" disabled="" value="홍길동(인사팀)"></td>
+                                         </tr>
+                                         <tr>
+                                             <th class="has_fvth_sp"><span class="fvth_sp imp">신청일</span></th>
+                                             <td class="has_fitem"><input type="date" class="input_calendar" disabled="" value="2020-12-26"></td>
+                                         </tr>
+                                     </tbody>
+                                 </table>
+                            </div>
+                            <div class="btn_csm_w">
+                                <a href="javascript:;" class="btn_csm type3">행복사</a>
+                                <a href="javascript:;" class="btn_csm type3">입력</a>
+                                <a href="javascript:;" class="btn_csm type3">저장</a>
+                            </div>
+                            <style>
+                                /* cell width 조절 */
+        
+                                /* [name='form_table'] .ctb_wid05 {
+                                    width: 60px;
+                                } */
+        
+                                /* 작은사이즈 폰 767 이하 */
+                                @media(max-width:767px) {
+                                
+                                }
+        
+                                @media(max-width:359px) {
+                                
+                                }
+                            </style>
+                            <div class="data_tb_z" name="form_table" data-scrollrow="5">
+                                <div class="data_tb_w define_thead">
+                                    <table class="data_tb type2">
+                                        <thead>
+                                            <tr>
+                                                <th class="has_wpsp has_ico"><span class="d_wpsp">선택</span></th>
+                                                <th class="has_norsp"><span class="d_norsp">신청가능여부</span></th>
+                                                <th class="has_norsp"><span class="d_norsp">사번</span></th>
+                                                <th class="has_norsp"><span class="d_norsp">성명</span></th>
+                                                <th class="has_wpsp has_btn"><span class="d_norsp">상세정보</span></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="data_tb_w define_tbody">
+                                    <table class="data_tb type2">
+                                        <tbody>
+                                            <tr>
+                                                <td class="has_wpsp has_ico">
+                                                    <input type="checkbox" class="rdchk">
+                                                </td>
+                                                <td class="has_norsp"><span class="d_norsp">가능</span></td>
+                                                <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="has_wpsp has_ico">
+                                                    <input type="checkbox" class="rdchk">
+                                                </td>
+                                                <td class="has_norsp"><span class="d_norsp">가능</span></td>
+                                                <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="has_wpsp has_ico">
+                                                    <input type="checkbox" class="rdchk">
+                                                </td>
+                                                <td class="has_norsp"><span class="d_norsp">가능</span></td>
+                                                <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="has_wpsp has_ico">
+                                                    <input type="checkbox" class="rdchk">
+                                                </td>
+                                                <td class="has_norsp"><span class="d_norsp">가능</span></td>
+                                                <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="has_wpsp has_ico">
+                                                    <input type="checkbox" class="rdchk">
+                                                </td>
+                                                <td class="has_norsp"><span class="d_norsp">가능</span></td>
+                                                <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="has_wpsp has_ico">
+                                                    <input type="checkbox" class="rdchk">
+                                                </td>
+                                                <td class="has_norsp"><span class="d_norsp">가능</span></td>
+                                                <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="has_wpsp has_ico">
+                                                    <input type="checkbox" class="rdchk">
+                                                </td>
+                                                <td class="has_norsp"><span class="d_norsp">가능</span></td>
+                                                <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="has_wpsp has_ico">
+                                                    <input type="checkbox" class="rdchk">
+                                                </td>
+                                                <td class="has_norsp"><span class="d_norsp">가능</span></td>
+                                                <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="has_wpsp has_ico">
+                                                    <input type="checkbox" class="rdchk">
+                                                </td>
+                                                <td class="has_norsp"><span class="d_norsp">가능</span></td>
+                                                <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="has_wpsp has_ico">
+                                                    <input type="checkbox" class="rdchk">
+                                                </td>
+                                                <td class="has_norsp"><span class="d_norsp">가능</span></td>
+                                                <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="has_wpsp has_ico">
+                                                    <input type="checkbox" class="rdchk">
+                                                </td>
+                                                <td class="has_norsp"><span class="d_norsp">가능</span></td>
+                                                <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="fileui_tb_w">
+                                <div class="fileui_tb">
+                                    <div class="fileui_td has_btn">
+                                        <div class="fkef_tb2_w">
+                                            <input type="file" class="fkef_file">
+                                            <a href="javascript:;" class="btn_fakefile">파일 선택</a>
+                                        </div>
+                                    </div>
+                                    <div class="fileui_td">
+                                        <div class="filename_para">선택된 파일 없음</div>
+                                    </div>
+                                    <div class="fileui_td has_btn">
+                                        <a href="javascript:;" class="btn_fakefile">파일 등록</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tbsk_tb_w">
+                                <table class="tbsk_tb">
+                                    <thead>
+                                        <tr>
+                                            <th class="ctb2_w01">파일명</th>
+                                            <th class="ctb2_w02">용량</th>
+                                            <th class="ctb2_w03">삭제</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="has_data">첨부파일.jpg</td>
+                                            <td>14KB</td>
+                                            <td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_fsm_w">
+                        <div class="btn_fsm_fxwrap">
+                            <a href="javascript:;" class="btn_fsm type2 d_type2"><span class="toggle_text">임시저장</span></a>
+                            <a href="javascript:;" class="btn_fsm">결재요청</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // middle -->
+
+            <!-- layer -->
+            <div class="dlayer_w" id="inside_trip_detail_01_popup">
+                <div class="dlayer_bg"></div>
+                <div class="dlayer_box">
+                    <div class="dlayer_tit_low"><h2 class="dlayer_tit">국내출장품의 상세정보</h2></div>
+                    <div class="dlayer_cont_low">
+                        <div class="form_field_item_wrap">
+                            <div class="form_field_item">
+                                <div class="fvtb_w type3">
+                                    <table class="fvtb">
+                                        <tbody>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+                                                <td class="has_fitem">
+                                                    <input type="text" class="fvint" disabled value="홍길동">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">소속</span></th>
+                                                <td class="has_fitem">
+                                                    <input type="text" class="fvint" disabled value="인재경영실">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">비용산출기준</span></th>
+                                                <td class="has_fitem">
+                                                    <select class="dsel">
+                                                        <option>선택</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">출장목적</span></th>
+                                                <td class="has_fitem">
+                                                    <textarea class="fvta"></textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">출장지</span></th>
+                                                <td class="has_fitem">
+                                                    <input type="text" class="fvint">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">지역등급</span></th>
+                                                <td class="has_fitem">
+                                                    <select class="dsel">
+                                                        <option>선택</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">출장일</span></th>
+                                                <td class="has_fitem">
+                                                    <input type="date" class="input_calendar">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">종료일</span></th>
+                                                <td class="has_fitem">
+                                                    <input type="date" class="input_calendar">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">기간(일)</span></th>
+                                                <td class="has_fitem">
+                                                    <input type="text" class="fvint">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">비고</span></th>
+                                                <td class="has_fitem"><textarea class="fvta"></textarea></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="btn_fsm_w">
+                                    <a href="javascript:;" class="btn_fsm">저장</a>
+                                </div>
+                            </div>
+                            <div class="form_field_item">
+                                <div class="form_field_title_row type2 mtype2">
+                                    <p class="form_field_title">출장비용 상세정보</p>
+                                    <div class="form_field_title_else_wrap">
+                                        <a href="javascript:;" class="btn_csm type3" id="btn_traffic_call">교통비계산</a>
+                                        <a href="javascript:;" class="btn_csm type3">입력</a>
+                                        <a href="javascript:;" class="btn_csm type3">저장</a>
+                                    </div>
+                                </div>
+                                <div class="form_field_content_row">
+                                    <style>
+                                        [name='cost_table'] .ctb_wid03{width:80px;}
+                                        [name='cost_table'] .ctb_wid06{width:90px;}
+                                    </style>
+                                    <div class="data_tb_w scroll_has" name="cost_table">
+                                        <table class="data_tb type2">
+                                            <thead>
+                                                <tr>
+                                                    <th class="has_wpsp has_ico2" rowspan="2"><span class="d_wpsp">삭제</span></th>
+                                                    <th class="has_wpsp has_ico2" rowspan="2"><span class="d_norsp">카드</span></th>
+                                                    <th class="has_norsp ctb_wid03"><span class="d_norsp">구분</span></th>
+                                                    <th class="has_norsp"><span class="d_norsp">단가</span></th>
+                                                    <th class="has_norsp"><span class="d_norsp">수량</span></th>
+                                                    <th class="has_wpsp has_btn ctb_wid06"><span class="d_norsp">금액</span></th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="has_norsp type2" colspan="3"><span class="d_norsp">비고</span></th>
+                                                    <th class="has_wpsp type2 ctb_wid06"><span class="d_norsp">상세보기</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_item ctb_wid03">
+                                                        <select class="dsel">
+                                                            <option>교통비</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_item line_type2" colspan="3">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                    <td class="has_wpsp">
+                                                        <a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_item ctb_wid03">
+                                                        <select class="dsel">
+                                                            <option>식비</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_item line_type2" colspan="3">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                    <td class="has_wpsp">
+                                                        <a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_item ctb_wid03">
+                                                        <select class="dsel">
+                                                            <option>숙박비</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_item line_type2" colspan="3">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                    <td class="has_wpsp">
+                                                        <a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_field_item">
+                                <div class="form_field_title_row type2 mtype2">
+                                    <p class="form_field_title">출장일정 상세정보</p>
+                                    <div class="form_field_title_else_wrap">
+                                        <a href="javascript:;" class="btn_csm type3">입력</a>
+                                        <a href="javascript:;" class="btn_csm type3">저장</a>
+                                    </div>
+                                </div>
+                                <div class="form_field_content_row">
+                                    <div class="fvtb_w type3">
+                                        <table class="fvtb">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="has_fvth_sp"><span class="fvth_sp">출발지</span></th>
+                                                    <td class="has_fitem">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                    <td class="has_fitem define_submit" rowspan="2">
+                                                        <a href="javascript:;" class="btn_csm type3 corner_type2">선택항목<br>일괄적용</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="has_fvth_sp"><span class="fvth_sp">목적지</span></th>
+                                                    <td class="has_fitem">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <style>
+                                        [name='cost_table2'] .ctb_wid03{width:95px;}
+                                    </style>
+                                    <div class="data_tb_w scroll_has mt30" name="cost_table2">
+                                        <table class="data_tb type2">
+                                            <thead>
+                                                <tr>
+                                                    <th class="has_wpsp has_ico2" rowspan="2"><span class="d_wpsp">삭제</span></th>
+                                                    <th class="has_wpsp has_ico2" rowspan="2"><span class="d_norsp">선택</span></th>
+                                                    <th class="has_norsp ctb_wid03"><span class="d_norsp">일자</span></th>
+                                                    <th class="has_norsp"><span class="d_norsp">출발지</span></th>
+                                                    <th class="has_norsp"><span class="d_norsp">도착지</span></th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="has_norsp" colspan="2"><span class="d_norsp">수행사항</span></th>
+                                                    <th class="has_norsp type2"><span class="d_norsp">비고</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_item ctb_wid03">
+                                                        <input type="date" class="input_calendar" value="2020-12-26">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                    <td class="align_left">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_item ctb_wid03">
+                                                        <input type="date" class="input_calendar" value="2020-12-26">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                    <td class="align_left">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_item ctb_wid03">
+                                                        <input type="date" class="input_calendar" value="2020-12-26">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                    <td class="align_left">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_item ctb_wid03">
+                                                        <input type="date" class="input_calendar" value="2020-12-26">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                    <td class="align_left">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_wpsp has_ico2" rowspan="2">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_item ctb_wid03">
+                                                        <input type="date" class="input_calendar" value="2020-12-26">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                    <td class="has_item">
+                                                        <input type="text" class="fvint acenter">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                    <td class="align_left">
+                                                        <input type="text" class="fvint">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="btn_fsm_w">
+                                        <a href="javascript:;" class="btn_fsm">저장</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+                </div>
+            </div>
+             <div class="dlayer_w" id="inside_trip_detail_02_popup">
+                <div class="dlayer_bg"></div>
+                <div class="dlayer_box">
+                    <div class="dlayer_tit_low"><h2 class="dlayer_tit">교통비 계산</h2></div>
+                    <div class="dlayer_cont_low">
+                        <div class="form_field_item_wrap">
+                            <div class="form_field_item">
+                                <div class="fvtb_w type3">
+                                    <table class="fvtb">
+                                        <tbody>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">이용구분</span></th>
+                                                <td class="has_fitem" colspan="3">
+                                                    <select class="dsel" style="width:70px;">
+                                                        <option>편도</option>
+                                                        <option>왕복</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">출발지주소</span></th>
+                                                <td class="has_fitem" colspan="3">
+                                                    <div class="td_block_group gap_type2">
+                                                        <div class="td_block">
+                                                            <div class="search_form_container">
+                                                                <div class="search_form_inner">
+                                                                    <input type="text" class="input_search" disabled>
+                                                                </div>
+                                                                <a href="#" class="btn_search_form_submit" id="btn_search_call"><span class="hdtext">검색</span></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="td_block">
+                                                            <input type="text" class="fvint">
+                                                        </div>
+                                                        <div class="td_block">
+                                                            <input type="text" class="fvint">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">도착지주소</span></th>
+                                                <td class="has_fitem" colspan="3">
+                                                    <div class="td_block_group gap_type2">
+                                                        <div class="td_block">
+                                                            <div class="search_form_container">
+                                                                <div class="search_form_inner">
+                                                                    <input type="text" class="input_search" disabled>
+                                                                </div>
+                                                                <a href="#" class="btn_search_form_submit" id="btn_search_call"><span class="hdtext">검색</span></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="td_block">
+                                                            <input type="text" class="fvint">
+                                                        </div>
+                                                        <div class="td_block">
+                                                            <input type="text" class="fvint">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">경로선택</span></th>
+                                                <td class="has_fitem">
+                                                    <select class="dsel" disabled>
+                                                        <option>선택</option>
+                                                    </select>
+                                                </td>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">차종</span></th>
+                                                <td class="has_fitem">
+                                                    <select class="dsel" disabled>
+                                                        <option>선택</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">유종</span></th>
+                                                <td class="has_fitem">
+                                                    <select class="dsel" disabled>
+                                                        <option>선택</option>
+                                                    </select>
+                                                </td>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">연비</span></th>
+                                                <td class="has_fitem">
+                                                    <input type="text" class="fvint" disabled>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp ptype2"><span class="fvth_sp">왕복이동<br>거리</span></th>
+                                                <td class="has_fitem">
+                                                    <input type="text" class="fvint">
+                                                </td>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">소요시간</span></th>
+                                                <td class="has_fitem">
+                                                    <input type="text" class="fvint">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">연료비</span></th>
+                                                <td class="has_fitem">
+                                                    <input type="text" class="fvint">
+                                                </td>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">통행료</span></th>
+                                                <td class="has_fitem">
+                                                    <input type="text" class="fvint">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="form_field_item">
+                                <div class="form_field_title_row type2 mtype2">
+                                    <p class="form_field_title">경유지</p>
+                                    <div class="form_field_title_else_wrap">
+                                        <a href="javascript:;" class="btn_csm type3">추가</a>
+                                        <a href="javascript:;" class="btn_csm type3">삭제</a>
+                                    </div>
+                                </div>
+                                <div class="form_field_content_row">
+                                    <style>
+                                        [name='traffic_table'] th:nth-of-type(2),
+                                        [name='traffic_table'] td:nth-of-type(2){width:30%;}
+                                    </style>
+                                    <div class="data_tb_w">
+                                        <table class="data_tb" name="traffic_table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="has_wpsp has_ico"><span class="d_wpsp">선택</span></th>
+                                                    <th class="has_norsp"><span class="d_norsp">경유지 구분</span></th>
+                                                    <th class="has_norsp"><span class="d_norsp">경유지 주소</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_norsp"><span class="d_norsp">데이터</span></td>
+                                                    <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_norsp"><span class="d_norsp">데이터</span></td>
+                                                    <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_norsp"><span class="d_norsp">데이터</span></td>
+                                                    <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_norsp"><span class="d_norsp">데이터</span></td>
+                                                    <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="has_norsp"><span class="d_norsp">데이터</span></td>
+                                                    <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <ul class="indent_text_item_list redimp mt10 pboth10">
+                                        <li>
+                                            <span class="indent_bullet">*</span>
+                                            <span class="indent_text_group">교통비 = 연료비 * 통행료 * 이용구분(왕복:2. 편도:1)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_fsm_w">
+                            <a href="javascript:;" class="btn_fsm">계산</a>
+                            <a href="javascript:;" class="btn_fsm">적용</a>
+                        </div>
+                    </div>
+                    <a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+                </div>
+            </div>
+            <!-- // layer -->
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    // 퍼블 확인용
+                    let url = window.location.href.split('?')[1];
+                    let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+                    if(url_2 === "popup_01"){
+                        dimLayerShow({ target : "#inside_trip_detail_01_popup"});
+                    }else if(url_2 === "popup_02"){
+                        dimLayerShow({ target : "#inside_trip_detail_01_popup"});
+                        dimLayerShow({ target : "#inside_trip_detail_02_popup"});
+                    }
+
+                    document.querySelector("#btn_traffic_call").addEventListener("click",()=>{
+                        dimLayerShow({ target : "#inside_trip_detail_02_popup"});
+                    });
+                });
+
+                window.addEventListener("load", () => {
+                    // scroll table
+                    scrollTable();
+                });
+            </script>
+        </div>
+    </body>
+</html>

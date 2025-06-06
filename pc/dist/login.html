@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1280" />
+	<link rel="stylesheet" href="./css/reset.css" />
+	<link rel="stylesheet" href="./css/jqueryui.css" />
+	<link rel="stylesheet" href="./css/swiper.min.css" />
+	<link rel="stylesheet" href="./css/layout.css" />
+	<link rel="stylesheet" href="./css/contents.css" />
+	<script src="./js/dynamicListener.min.js"></script>
+	<script src="./js/jquery-1.12.4.min.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/ui.js"></script>
+	<title>KSA 한국표준협회</title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap center_type">
+		<header class="center_header_wrap">
+			<h1 class="center_toplogo_title"><a href="#" class="center_toplogo_link"><img src="./images/center_toplogo.png" alt="KSA 한국표준협회"></a></h1>
+			<div class="center_util_item_wrap">
+				<ul class="center_util_list">
+					<li>
+						<p class="center_util_ment">인사시스템에 오신것을 환영합니다!</p>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<section class="center_middle_wrap">
+			<div class="center_form_box_wrap">
+				<div class="center_form_box">
+					<div class="center_form_title_row">
+						<h2 class="center_form_title">로그인</h2>
+					</div>
+					<div class="center_form_content">
+						<div class="form_block_wrap">
+							<div class="form_block">
+								<select class="form_select" required>
+									<option value="">업체</option>
+									<option value="1" selected>화이트 정보통신</option>
+								</select>
+							</div>
+							<div class="form_block">
+								<input type="text" class="form_input" value="2862012">
+							</div>
+							<div class="form_block">
+								<input type="password" class="form_input" placeholder="비밀번호">
+							</div>
+							<div class="form_block define_flex">
+								<div class="form_block_cols">
+									<div class="props_item">
+										<input type="checkbox" class="props_form" id="saveid">
+										<label for="saveid" class="props_label">아이디 저장</label>
+									</div>
+								</div>
+								<div class="form_block_cols">
+									<a href="#" class="btn_form_quad">비밀번호 SMS요청</a>
+								</div>
+							</div>
+							<div class="btn_form_submit_wrap">
+								<a href="#" class="btn_form_submit"><span class="btn_form_submit_text">로그인</span></a>
+							</div>
+							<div class="form_box_copy_wrap">
+								<p class="form_box_copy">초기 비밀번호는 주민등록번호 뒤 7자리입니다.</p>
+								<a href="#" class="btn_text_only">비밀번호를 잊어버리셨습니까?</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="center_footer_wrap">
+			<div class="center_footer_inner">
+				<div class="center_footer_inner_cols">
+					<span class="center_footer_logo">
+						<img src="./images/center_bottomlogo.png" alt="KSA 한국표준협회">
+					</span>
+				</div>
+				<div class="center_footer_inner_cols">
+					<p class="center_footer_copy">Copyright © Ksa. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script>
+		selectFunc();
+	</script>
+</body>
+
+</html>

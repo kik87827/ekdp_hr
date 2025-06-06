@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('./include/head.html')
+    <body class="front_body">
+        <div class="page_wrap">
+            @@include('./include/header_sub.html', {
+				page_sub: true,
+				sub_title: "증명서신청"
+			})
+
+            <!-- middle -->
+            <section class="middle_zone">
+                <div class="form_field_item_zone">
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <div class="form_field_title_row type2">
+                                <p class="form_field_title">결재선</p>
+                                <a href="javascript:;" class="btn_csm type3">결재선 지정</a>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="tbsk_tb_w">
+									<table class="tbsk_tb">
+										<thead>
+											<tr>
+												<th class="ctb_w01">구분</th>
+												<th class="ctb_w02">성명</th>
+												<th class="ctb_w03">상태</th>
+												<th class="ctb_w04">결재완료일</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>기안</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+											<tr>
+												<th>결재라인</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+											<tr>
+												<th>수신자</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+                            </div>
+                        </div>
+                        <div class="form_field_item else_margin">
+                            <div class="fvtb_w type3">
+                                 <table class="fvtb">
+                                     <tbody>
+                                         <tr>
+                                             <th class="has_fvth_sp"><span class="fvth_sp imp">신청자</span></th>
+                                             <td class="has_fitem"><input type="text" class="fvint" disabled="" value="홍길동(인사팀)"></td>
+                                         </tr>
+                                         <tr>
+                                             <th class="has_fvth_sp"><span class="fvth_sp imp">신청일</span></th>
+                                             <td class="has_fitem"><input type="date" class="input_calendar" disabled="" value="2020-12-26"></td>
+                                         </tr>
+                                     </tbody>
+                                 </table>
+                            </div>
+                            <div class="btn_csm_w">
+                                 <a href="javascript:;" class="btn_csm type3">본인 입력</a>
+                                 <a href="javascript:;" class="btn_csm type3">타인 입력</a>
+                                 <a href="javascript:;" class="btn_csm type3">행복사</a>
+                                 <a href="javascript:;" class="btn_csm type3">삭제</a>
+                             </div>
+                             <style>
+                                 /* cell width 조절 */
+         
+                                 /* [name='form_table'] th:nth-of-type(4),
+                                 [name='form_table'] td:nth-of-type(4){
+                                     width: 18%;
+                                 } */
+                                 /* [name='form_table'] th:nth-of-type(5),
+                                 [name='form_table'] td:nth-of-type(5){
+                                     width: 60px;
+                                 } */
+         
+                                 /* 작은사이즈 폰 767 이하 */
+                                 @media(max-width:767px) {
+                                    
+                                 }
+         
+                                 @media(max-width:359px) {
+                                   
+                                 }
+                             </style>
+                             <div class="data_tb_z" name="form_table" data-scrollrow="5">
+                                 <div class="data_tb_w define_thead">
+                                     <table class="data_tb type2">
+                                         <thead>
+                                             <tr>
+                                                 <th class="has_wpsp has_ico"><span class="d_wpsp">선택</span></th>
+                                                 <th class="has_norsp"><span class="d_norsp">사번</span></th>
+                                                 <th class="has_norsp"><span class="d_norsp">성명</span></th>
+                                                 <th class="has_norsp"><span class="d_norsp">발행일자</span></th>
+                                                 <th class="has_wpsp has_btn"><span class="d_norsp">상세정보</span></th>
+                                             </tr>
+                                         </thead>
+                                     </table>
+                                 </div>
+                                 <div class="data_tb_w define_tbody">
+                                     <table class="data_tb type2">
+                                         <tbody>
+                                             <tr>
+                                                 <td class="has_wpsp has_ico">
+                                                     <input type="checkbox" class="rdchk">
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                 <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                 <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                             </tr>
+                                             <tr>
+                                                 <td class="has_wpsp has_ico">
+                                                     <input type="checkbox" class="rdchk">
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                 <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                 <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                             </tr>
+                                             <tr>
+                                                 <td class="has_wpsp has_ico">
+                                                     <input type="checkbox" class="rdchk">
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                 <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                 <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                             </tr>
+                                             <tr>
+                                                 <td class="has_wpsp has_ico">
+                                                     <input type="checkbox" class="rdchk">
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                 <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                 <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                             </tr>
+                                             <tr>
+                                                 <td class="has_wpsp has_ico">
+                                                     <input type="checkbox" class="rdchk">
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                 <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                 <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                             </tr>
+                                             <tr>
+                                                 <td class="has_wpsp has_ico">
+                                                     <input type="checkbox" class="rdchk">
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                 <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                 <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                             </tr>
+                                             <tr>
+                                                 <td class="has_wpsp has_ico">
+                                                     <input type="checkbox" class="rdchk">
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                 <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                 <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                             </tr>
+                                             <tr>
+                                                 <td class="has_wpsp has_ico">
+                                                     <input type="checkbox" class="rdchk">
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                 <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                 <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                             </tr>
+                                             <tr>
+                                                 <td class="has_wpsp has_ico">
+                                                     <input type="checkbox" class="rdchk">
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                 <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                 <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                             </tr>
+                                             <tr>
+                                                 <td class="has_wpsp has_ico">
+                                                     <input type="checkbox" class="rdchk">
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                 <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                 <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                             </tr>
+                                             <tr>
+                                                 <td class="has_wpsp has_ico">
+                                                     <input type="checkbox" class="rdchk">
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">300758</span></td>
+                                                 <td class="has_norsp">
+                                                    <a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">홍길동</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+                                                 </td>
+                                                 <td class="has_norsp"><span class="d_norsp">2023.1211</span></td>
+                                                 <td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+                                             </tr>
+                                         </tbody>
+                                     </table>
+                                 </div>
+                             </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="fileui_tb_w">
+                                <div class="fileui_tb">
+                                    <div class="fileui_td has_btn">
+                                        <div class="fkef_tb2_w">
+                                            <input type="file" class="fkef_file">
+                                            <a href="javascript:;" class="btn_fakefile">파일 선택</a>
+                                        </div>
+                                    </div>
+                                    <div class="fileui_td">
+                                        <div class="filename_para">선택된 파일 없음</div>
+                                    </div>
+                                    <div class="fileui_td has_btn">
+                                        <a href="javascript:;" class="btn_fakefile">파일 등록</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tbsk_tb_w">
+                                <table class="tbsk_tb">
+                                    <thead>
+                                        <tr>
+                                            <th class="ctb2_w01">파일명</th>
+                                            <th class="ctb2_w02">용량</th>
+                                            <th class="ctb2_w03">삭제</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="has_data">첨부파일.jpg</td>
+                                            <td>14KB</td>
+                                            <td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_fsm_w">
+                        <div class="btn_fsm_fxwrap">
+                            <a href="javascript:;" class="btn_fsm type2 d_type2"><span class="toggle_text">임시저장</span></a>
+                            <a href="javascript:;" class="btn_fsm">결재요청</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // middle -->
+
+            <!-- layer -->
+            <div class="dlayer_w" id="certificate_detail_popup">
+                <div class="dlayer_bg"></div>
+                <div class="dlayer_box">
+                    <div class="dlayer_tit_low"><h2 class="dlayer_tit">증명서 상세정보</h2></div>
+                    <div class="dlayer_cont_low">
+                        <div class="fvtb_w type3">
+                            <table class="fvtb">
+                                <tbody>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+                                        <td class="has_fitem"><input type="text" class="fvint" disabled value="홍길동(인사팀)"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp">소속</span></th>
+                                        <td class="has_fitem"><input type="text" class="fvint" disabled value="인재경영실"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">증명서구분</span></th>
+                                        <td class="has_fitem">
+                                            <select class="dsel">
+                                                <option>경력증명서(국문)</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">신청부수</span></th>
+                                        <td class="has_fitem"><input type="text" class="fvint short_count" value="1" style="width:50px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">용도</span></th>
+                                        <td class="has_fitem">
+                                            <select class="dsel">
+                                                <option>고용노동부제출</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">제출처<br>(발주처)</span></th>
+                                        <td class="has_fitem"><input type="text" class="fvint"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">용역사업명</span></th>
+                                        <td class="has_fitem"><input type="text" class="fvint"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">주민번호표기</span></th>
+                                        <td class="has_fitem"><input type="checkbox" class="rdchk"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">발령이력표기</span></th>
+                                        <td class="has_fitem"><input type="checkbox" class="rdchk"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">담당업무표기</span></th>
+                                        <td class="has_fitem"><input type="checkbox" class="rdchk"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">이전사번<br>경혁포함</span></th>
+                                        <td class="has_fitem"><input type="checkbox" class="rdchk"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">정산년도</span></th>
+                                        <td class="has_fitem">
+                                            <select class="dsel">
+                                                <option>2023</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">귀속년월</span></th>
+                                        <td class="has_fitem"><input type="text" class="fvint" value="202301"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">지급일자</span></th>
+                                        <td class="has_fitem">
+                                            <select class="dsel">
+                                                <option>20230125 정기급여</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">영문주소</span></th>
+                                        <td class="has_fitem"><textarea class="fvta"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp">비고</span></th>
+                                        <td class="has_fitem"><textarea class="fvta"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="btn_fsm_w">
+                            <a href="javascript:;" class="btn_fsm">저장</a>
+                        </div>
+                    </div>
+                    <a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+                </div>
+            </div>
+            <!-- // layer -->
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.querySelectorAll("[name='detail_call']").forEach((item)=>{
+                        item.addEventListener("click",()=>{
+                            dimLayerShow({ target : "#certificate_detail_popup"});
+                        });
+                    });
+
+                    // 퍼블 확인용
+                    let url = window.location.href.split('?')[1];
+                    let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+                    window.addEventListener("DOMContentLoaded",()=>{
+                        if(url_2 === "popup"){
+                            dimLayerShow({ target : "#certificate_detail_popup"});
+                        }
+                    });
+                });
+
+                window.addEventListener("load", () => {
+                    // scroll table
+                    scrollTable();
+                });
+            </script>
+        </div>
+    </body>
+</html>

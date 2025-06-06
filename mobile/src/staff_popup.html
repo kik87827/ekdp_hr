@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		@@include('./include/head.html')
+	</head>
+	<body class="admin_body">
+		 <div class="page_wrap">
+			@@include('./include/header_sub.html', {
+				page_sub: true,
+				sub_title: "팝업"
+			})
+            <!-- middle -->
+            <section class="middle_zone sub_type2">
+                내용이 들어갑니다.
+            </section>
+            <!-- // middle -->
+        </div>
+		
+		<!-- layer -->
+		<div class="dlayer_w" id="find_staff_layer">
+			<div class="dlayer_bg"></div>
+			<div class="dlayer_box">
+				<div class="dlayer_tit_low"><h2 class="dlayer_tit">사원찾기</h2></div>
+				<div class="dlayer_cont_low">
+					<div class="dlay_sort_w">
+						<p class="dlsort_tit">사원/성명</p>
+						<div class="dlsort_form_tb">
+							<div class="dlsort_form_td dlsort01"><input type="text" class="dlsort_int" value="영등포 여의나루"></div>
+							<div class="dlsort_form_td dlsort02"><a href="#" class="btn_dlsort">검색</a></div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // layer -->
+		
+		<script>
+			dimLayerShow({ target : "#find_staff_layer"});
+		</script>
+	</body>
+</html>

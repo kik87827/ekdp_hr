@@ -1,0 +1,15 @@
+node_modules
+
+
+/pc/node_modules
+/mobile/node_modules
+
+/node_modules
+
+
+
+/.history
+
+
+*.map
+

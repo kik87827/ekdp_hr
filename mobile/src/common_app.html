@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('./include/head.html')
+    <body class="front_body">
+        <div class="page_wrap">
+            @@include('./include/header_sub.html', {
+				page_sub: true,
+				sub_title: "신청서명"
+			})
+            <!-- middle -->
+            <section class="middle_zone">
+                <div class="form_field_item_zone">
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <div class="form_field_title_row type2">
+                                <p class="form_field_title">결재선</p>
+                                <a href="javascript:;" class="btn_csm type3">결재선 지정</a>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="tbsk_tb_w">
+									<table class="tbsk_tb">
+										<thead>
+											<tr>
+												<th class="ctb_w01">구분</th>
+												<th class="ctb_w02">성명</th>
+												<th class="ctb_w03">상태</th>
+												<th class="ctb_w04">결재완료일</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>기안</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+											<tr>
+												<th>결재라인</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+											<tr>
+												<th>수신자</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            각 신청서 내용<br>
+                            각 신청서 내용<br>
+                            각 신청서 내용<br>
+                            각 신청서 내용<br>
+                            각 신청서 내용<br>
+                            각 신청서 내용<br>
+                            각 신청서 내용<br>
+                            각 신청서 내용<br>
+                            각 신청서 내용<br>
+                            각 신청서 내용
+                        </div>
+                        <div class="form_field_item">
+                            <div class="fileui_tb_w">
+                                <div class="fileui_tb">
+                                    <div class="fileui_td has_btn">
+                                        <div class="fkef_tb2_w">
+                                            <input type="file" class="fkef_file">
+                                            <a href="javascript:;" class="btn_fakefile">파일 선택</a>
+                                        </div>
+                                    </div>
+                                    <div class="fileui_td">
+                                        <div class="filename_para">선택된 파일 없음</div>
+                                    </div>
+                                    <div class="fileui_td has_btn">
+                                        <a href="javascript:;" class="btn_fakefile">파일 등록</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tbsk_tb_w">
+                                <table class="tbsk_tb">
+                                    <thead>
+                                        <tr>
+                                            <th class="ctb2_w01">파일명</th>
+                                            <th class="ctb2_w02">용량</th>
+                                            <th class="ctb2_w03">삭제</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="has_data">첨부파일.jpg</td>
+                                            <td>14KB</td>
+                                            <td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_fsm_w">
+                        <div class="btn_fsm_fxwrap">
+                            <a href="javascript:;" class="btn_fsm type2 d_type2"><span class="toggle_text">임시저장</span></a>
+                            <a href="javascript:;" class="btn_fsm">결재요청</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // middle -->
+            <script>
+                $(function() {
+					$(".btn_fakefile").on("click", function() {
+                        $(this).prev(".fkef_file").trigger("click");
+                    });
+                    $(".fkef_file").on("change", function() {
+                        var fileValue = $(this).val().split("\\");
+                        var fileName = fileValue[fileValue.length - 1];
+                        $(this).parents(".fileui_tb_w").find(".filename_para").text(fileName);
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>

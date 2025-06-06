@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+
+<body class="front_body">
+    <div class="page_wrap">
+        <div id="container">
+            <div id="searchbar">
+                <input type="text" class="input_auto" id="input_auto_01" style= />
+                <br><br>
+                <br><br>
+                <br><br>
+                <br><br>
+                <br><br>2
+                <br><br>
+                <br><br>
+                <br><br>
+                <input type="text" class="input_auto" id="input_auto_02" />
+            </div>
+            <script>
+                autoComplete([
+                    {
+                        target : "#input_auto_01",
+                        source : ["Air Conditioning", "Ant Exterminators", "cc", "dd"]
+                    }
+                ])
+                function autoComplete(option){
+                    jQuery(document).ready(function ($) {
+                        $.ui.autocomplete.prototype._renderItem = function (ul, item) {
+                            var t = String(item.value).replace(
+                                new RegExp(this.term, "gi"),
+                                "<strong>$&</strong>");
+                            return $("<li></li>")
+                                .data("item.autocomplete", item)
+                                .append("<div>" + t + "</div>")
+                                .appendTo(ul);
+                        };
+                        $(".input_auto").autocomplete({
+                            minLength: 0,
+                            source: [
+                                "Air Conditioning", "Ant Exterminators", "cc", "dd"
+                            ],
+                            select: function (event, ui) {
+                                console.log(ui.item.value, this);
+                                $(this).val(ui.item.value);
+                                    return false;
+                                }
+                        })
+                    });
+                }
+                
+            </script>
+            <style>
+                #searchbar {
+                    width: 540px;
+                    height: 50px;
+                    background: #718fff;
+                    border-radius: 5px;
+                    border: 3px solid #718fff;
+                    box-shadow: 0 0 0pt 10pt rgba(255, 255, 255, .5)
+                }
+
+                #container {
+                    width: 540px;
+                    height: 80px;
+                    position: relative;
+                    margin: 0 auto;
+                    padding-top: 30%;
+                }
+
+                input {
+                    width: 400px;
+                    height: 30px;
+                    font-size: 20px;
+                    outline: none;
+                    padding: 10px;
+                    border: none;
+                    background: white
+                }
+
+                .ui-autocomplete {
+                    list-style-type: none;
+                    text-align: left;
+                    margin-top: 10px;
+                }
+
+                .ui-autocomplete li {
+                    font-family: "helvetica";
+                    padding: 5px 15px;
+                    background: white;
+                    width: 420px;
+                    margin-left: -40px;
+                    box-sizing: border-box;
+                }
+
+                .ui-autocomplete li:hover {
+                    color: #fc0;
+                }
+
+                #btn {
+                    background: #4e74ff;
+                    width: 100px;
+                    height: 30px;
+                    padding: 10px;
+                    color: white;
+                    font-family: "helvetica";
+                    cursor: pointer;
+                    text-align: center;
+                    line-height: 30px;
+                }
+
+                .ui-helper-hidden-accessible>div {
+                    opacity: 0;
+                }
+            </style>
+        </div>
+    </div>
+</body>
+
+</html>

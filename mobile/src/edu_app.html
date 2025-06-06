@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('./include/head.html')
+    <body class="front_body">
+        <div class="page_wrap">
+            @@include('./include/header_sub.html', {
+				page_sub: true,
+				sub_title: "교육신청"
+			})
+
+            <!-- middle -->
+            <section class="middle_zone">
+                <div class="form_field_item_zone">
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <div class="form_field_title_row type2">
+                                <p class="form_field_title">결재선</p>
+                                <a href="javascript:;" class="btn_csm type3">결재선 지정</a>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="tbsk_tb_w">
+									<table class="tbsk_tb">
+										<thead>
+											<tr>
+												<th class="ctb_w01">구분</th>
+												<th class="ctb_w02">성명</th>
+												<th class="ctb_w03">상태</th>
+												<th class="ctb_w04">결재완료일</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>기안</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+											<tr>
+												<th>결재라인</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+											<tr>
+												<th>수신자</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+                            </div>
+                        </div>
+                        <div class="form_field_item else_margin">
+                            <div class="fvtb_w type3">
+                                 <table class="fvtb">
+                                     <tbody>
+                                         <tr>
+                                             <th class="has_fvth_sp"><span class="fvth_sp imp">신청자</span></th>
+                                             <td class="has_fitem"><input type="text" class="fvint" disabled value="홍길동(인사팀)"></td>
+                                         </tr>
+                                         <tr>
+                                             <th class="has_fvth_sp"><span class="fvth_sp imp">신청일</span></th>
+                                             <td class="has_fitem"><input type="date" class="input_calendar" disabled value="2020-12-26"></td>
+                                         </tr>
+                                         <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp imp">교육과정</span></th>
+                                            <td class="has_fitem">
+                                                <div class="search_form_container">
+                                                    <div class="search_form_inner">
+                                                        <input type="text" class="input_search" disabled value="KS인증심사원 직무교육">
+                                                    </div>
+                                                    <a href="#" class="btn_search_form_submit" id="btn_search_call"><span class="hdtext">검색</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                         <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp imp">차수</span></th>
+                                            <td class="has_fitem"><input type="text" class="fvint" value="1"></td>
+                                        </tr>
+                                         <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp imp">교육시작일</span></th>
+                                            <td class="has_fitem"><input type="date" class="input_calendar" value="2020-12-26"></td>
+                                        </tr>
+                                         <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp imp">교육종료일</span></th>
+                                            <td class="has_fitem"><input type="date" class="input_calendar" value="2020-12-26"></td>
+                                        </tr>
+                                         <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">교육일수</span></th>
+                                            <td class="has_fitem"><input type="text" class="fvint" value="1"></td>
+                                        </tr>
+                                         <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">교육시간</span></th>
+                                            <td class="has_fitem"><input type="text" class="fvint" value="7"></td>
+                                        </tr>
+                                         <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">교육인원</span></th>
+                                            <td class="has_fitem"><input type="text" class="fvint" value="1"></td>
+                                        </tr>
+                                         <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">교육비</span></th>
+                                            <td class="has_fitem"><input type="text" class="fvint" value="500,000"></td>
+                                        </tr>
+                                         <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">교육기관</span></th>
+                                            <td class="has_fitem"><input type="text" class="fvint" value="한국표준협회"></td>
+                                        </tr>
+                                         <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">환급비용</span></th>
+                                            <td class="has_fitem"><input type="text" class="fvint"></td>
+                                        </tr>
+                                         <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">비고</span></th>
+                                            <td class="has_fitem"><textarea class="fvta"></textarea></td>
+                                        </tr>
+                                     </tbody>
+                                 </table>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="fileui_tb_w">
+                                <div class="fileui_tb">
+                                    <div class="fileui_td has_btn">
+                                        <div class="fkef_tb2_w">
+                                            <input type="file" class="fkef_file">
+                                            <a href="javascript:;" class="btn_fakefile">파일 선택</a>
+                                        </div>
+                                    </div>
+                                    <div class="fileui_td">
+                                        <div class="filename_para">선택된 파일 없음</div>
+                                    </div>
+                                    <div class="fileui_td has_btn">
+                                        <a href="javascript:;" class="btn_fakefile">파일 등록</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tbsk_tb_w">
+                                <table class="tbsk_tb">
+                                    <thead>
+                                        <tr>
+                                            <th class="ctb2_w01">파일명</th>
+                                            <th class="ctb2_w02">용량</th>
+                                            <th class="ctb2_w03">삭제</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="has_data">첨부파일.jpg</td>
+                                            <td>14KB</td>
+                                            <td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_fsm_w">
+                        <div class="btn_fsm_fxwrap">
+                            <a href="javascript:;" class="btn_fsm type2 d_type2"><span class="toggle_text">임시저장</span></a>
+                            <a href="javascript:;" class="btn_fsm">결재요청</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // middle -->
+
+
+            <!-- layer -->
+            <div class="dlayer_w" id="edu_detail_popup">
+                <div class="dlayer_bg"></div>
+                <div class="dlayer_box">
+                    <div class="dlayer_tit_low"><h2 class="dlayer_tit">교육과정찾기</h2></div>
+                    <div class="dlayer_cont_low">
+                        <div class="fvtb_w type3">
+                            <table class="fvtb">
+                                <tbody>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp">개발년도</span></th>
+                                        <td class="has_fitem">
+                                            <input type="text" class="fvint acenter" value="2023">
+                                        </td>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">교육유형</span></th>
+                                        <td class="has_fitem" style="width:35%">
+                                            <select class="dsel">
+                                                <option>전체</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp">과정명</span></th>
+                                        <td class="has_fitem2" colspan="3">
+                                            <div class="fvdata_btb">
+                                                <div class="fvdata_btd fbtd01">
+                                                    <input type="text" class="fvint">
+                                                </div>
+                                                <div class="fvdata_btd fbtd02">
+                                                    <a href="javascript:;" class="itemin btn_csm type2">조회</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <style>
+                            /* cell width 조절 */
+                            [name='edu_table'] .ctb_wid01 {}
+                            [name='edu_table'] .ctb_wid02 {width: 48%;}
+                            [name='edu_table'] .ctb_wid03 {width: 15%;}
+                            /* 작은사이즈 폰 767 이하 */
+                            @media(max-width:767px) {}
+    
+                            @media(max-width:359px) {}
+                        </style>
+                        <div class="hvtb_w type2 mt20">
+                            <table class="hvtb ptype2" name="edu_table">
+                                <thead>
+                                    <tr>
+                                        <th class="ctb_wid01 align_left">교육유형</th>
+                                        <th class="ctb_wid02 align_left">교육과정명</th>
+                                        <th class="ctb_wid03" rowspan="2">선택</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="ctb_wid01 align_left">교육기간</th>
+                                        <th class="ctb_wid02 align_left">교육기관</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ctb_wid01 align_left"><span class="tb_data">직무역량</span></td>
+                                        <td class="ctb_wid02 align_left"><span class="tb_data">문제 해결을 위한 스마트 솔루션</span></td>
+                                        <td class="ctb_wid03" rowspan="2"><a href="#" class="btn_csm xsm">선택</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ctb_wid01 align_left"><span class="tb_data">2023.04.10 ~ 2023.12.01</span></td>
+                                        <td class="ctb_wid02 align_left"><span class="tb_data">한국표준협회</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ctb_wid01 align_left"><span class="tb_data">직무역량</span></td>
+                                        <td class="ctb_wid02 align_left"><span class="tb_data">문제 해결을 위한 스마트 솔루션</span></td>
+                                        <td class="ctb_wid03" rowspan="2"><a href="#" class="btn_csm xsm">선택</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ctb_wid01 align_left"><span class="tb_data">2023.04.10 ~ 2023.12.01</span></td>
+                                        <td class="ctb_wid02 align_left"><span class="tb_data">한국표준협회</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ctb_wid01 align_left"><span class="tb_data">직무역량</span></td>
+                                        <td class="ctb_wid02 align_left"><span class="tb_data">문제 해결을 위한 스마트 솔루션</span></td>
+                                        <td class="ctb_wid03" rowspan="2"><a href="#" class="btn_csm xsm">선택</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ctb_wid01 align_left"><span class="tb_data">2023.04.10 ~ 2023.12.01</span></td>
+                                        <td class="ctb_wid02 align_left"><span class="tb_data">한국표준협회</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ctb_wid01 align_left"><span class="tb_data">직무역량</span></td>
+                                        <td class="ctb_wid02 align_left"><span class="tb_data">문제 해결을 위한 스마트 솔루션</span></td>
+                                        <td class="ctb_wid03" rowspan="2"><a href="#" class="btn_csm xsm">선택</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ctb_wid01 align_left"><span class="tb_data">2023.04.10 ~ 2023.12.01</span></td>
+                                        <td class="ctb_wid02 align_left"><span class="tb_data">한국표준협회</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination">
+                            <a href="#none" class="first">Go to first</a>
+                            <a href="#none" class="prev">Go to prev</a>
+                            <a href="#none" class="num on">1</a>
+                            <a href="#none" class="num">2</a>
+                            <a href="#none" class="num">3</a>
+                            <a href="#none" class="num">4</a>
+                            <a href="#none" class="num">5</a>
+                            <a href="#none" class="next">Go to next</a>
+                            <a href="#none" class="last">Go to last</a>
+                        </div>
+                    </div>
+                    <a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+                </div>
+            </div>
+            <!-- // layer -->
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.querySelector("#btn_search_call").addEventListener("click",(e)=>{
+                        e.preventDefault();
+                        dimLayerShow({ target : "#edu_detail_popup"});
+                    });
+
+
+                    // 퍼블 확인용
+                    let url = window.location.href.split('?')[1];
+                    let url_2 = url !== undefined ? url.split('#')[0] : null;
+                    if(url_2 === "popup"){
+                        dimLayerShow({ target : "#edu_detail_popup"});
+                    }
+                });
+            </script>
+        </div>
+    </body>
+</html>

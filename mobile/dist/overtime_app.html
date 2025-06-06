@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="./css/reset.css" />
+	<link rel="stylesheet" href="./css/layout.css" />
+	<link rel="stylesheet" href="./css/contents.css" />
+	<script src="./js/jquery-3.6.0.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/ui.js"></script>
+	<title>KSA 한국표준협회</title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<!-- header -->
+		<header class="header_zone type3">
+			<a href="#" class="btn_top_home"><span class="hdtext">홈</span></a>
+
+			<h1 class="header_sub_title"><span class="header_sub_title_inner">특근신청</span></h1>
+
+			<a href="#" class="btn_mobile_menu type2">
+				<div class="btn_mobile_menu_obj"></div>
+				<span class="hdtext">전체메뉴 열기</span>
+			</a>
+			<!-- mobile_menu -->
+			<div class="mobile_mainmenu_zone">
+				<div class="mainmenu_dim"></div>
+				<div class="mobile_mainmenu_wrap">
+					<div class="mbutil_low">
+						<!-- 로그인 전 -->
+						<!-- <ul class="mbutil_hlist">
+                <li><a href="#" class="mbutil">로그인</a></li>
+            </ul> -->
+						<!-- // 로그인 전 -->
+						<!-- 로그인 후 -->
+						<ul class="mbutil_hlist">
+							<li>
+								<a href="#" class="mbutil">로그아웃</a>
+							</li>
+						</ul>
+						<!-- // 로그인 후 -->
+					</div>
+					<div class="mbmenu_low">
+						<div class="mbmenu_inwrap">
+							<ul class="mbmenu_vlist">
+								<li><a href="#" class="mbmenu_one">MY인사</a></li>
+								<li><a href="#" class="mbmenu_one">승인요청</a></li>
+								<li><a href="#" class="mbmenu_one">승인대기</a></li>
+								<li><a href="#" class="mbmenu_one">근태현황</a></li>
+								<li><a href="#" class="mbmenu_one">근태신청</a></li>
+								<li><a href="#" class="mbmenu_one">복지지원비신청</a></li>
+								<li><a href="#" class="mbmenu_one">휴양시설</a></li>
+								<li><a href="#" class="mbmenu_one">급여명세서조회</a></li>
+								<li><a href="#" class="mbmenu_one">제증명신청</a></li>
+								<li><a href="#" class="mbmenu_one">임직원조회</a></li>
+							</ul>
+						</div>
+					</div>
+					<a href="#" class="btn_mbmenuclose">
+						<span class="hdtext">메인메뉴 닫기</span>
+					</a>
+				</div>
+			</div>
+			<!-- // mobile_menu -->
+		</header>
+		<!-- // header -->
+
+
+		<!-- middle -->
+		<section class="middle_zone">
+			<div class="form_field_item_zone">
+				<div class="form_field_item_group">
+					<div class="form_field_item">
+						<div class="form_field_title_row type2">
+							<p class="form_field_title">결재선</p>
+							<a href="javascript:;" class="btn_csm type3">결재선 지정</a>
+						</div>
+						<div class="form_field_content_row">
+							<div class="tbsk_tb_w">
+								<table class="tbsk_tb">
+									<thead>
+										<tr>
+											<th class="ctb_w01">구분</th>
+											<th class="ctb_w02">성명</th>
+											<th class="ctb_w03">상태</th>
+											<th class="ctb_w04">결재완료일</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>기안</th>
+											<td>홍길동</td>
+											<th>결재</th>
+											<td>2020.06.25</td>
+										</tr>
+										<tr>
+											<th>결재라인</th>
+											<td>홍길동</td>
+											<th>결재</th>
+											<td>2020.06.25</td>
+										</tr>
+										<tr>
+											<th>수신자</th>
+											<td>홍길동</td>
+											<th>결재</th>
+											<td>2020.06.25</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="form_field_item else_margin">
+						<div class="fvtb_w type3">
+							<table class="fvtb">
+								<tbody>
+									<tr>
+										<th class="has_fvth_sp"><span class="fvth_sp imp">신청자</span></th>
+										<td class="has_fitem"><input type="text" class="fvint" disabled="" value="홍길동(인사팀)"></td>
+									</tr>
+									<tr>
+										<th class="has_fvth_sp"><span class="fvth_sp imp">신청일</span></th>
+										<td class="has_fitem"><input type="date" class="input_calendar" disabled="" value="2020-12-26"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btn_csm_w">
+							<a href="javascript:;" class="btn_csm type3">입력</a>
+							<a href="javascript:;" class="btn_csm type3">행복사</a>
+							<a href="javascript:;" class="btn_csm type3">삭제</a>
+						</div>
+						<style>
+							/* cell width 조절 */
+
+							/* 작은사이즈 폰 767 이하 */
+							@media(max-width:767px) {}
+
+							@media(max-width:359px) {}
+						</style>
+						<div class="data_tb_z" name="form_table" data-scrollrow="5">
+							<div class="data_tb_w define_thead">
+								<table class="data_tb type2">
+									<thead>
+										<tr>
+											<th class="ctb_wid01 has_wpsp has_ico"><span class="d_wpsp">선택</span></th>
+											<th class="ctb_wid02 has_norsp"><span class="d_norsp">사번</span></th>
+											<th class="ctb_wid03 has_norsp"><span class="d_norsp">성명</span></th>
+											<th class="ctb_wid04 has_norsp"><span class="d_norsp">근무일자</span></th>
+											<th class="ctb_wid05 has_wpsp has_btn"><span class="d_norsp">상세정보</span></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class="data_tb_w define_tbody">
+								<table class="data_tb type2">
+									<tbody>
+										<tr>
+											<td class="has_wpsp has_ico">
+												<input type="checkbox" class="rdchk">
+											</td>
+											<td class="has_norsp"><span class="d_norsp">300758</span></td>
+											<td class="has_norsp">
+												<a href="#" class="btn_text_obj">
+													<span class="d_norsp">홍길동</span>
+													<i class="ico search"></i>
+												</a>
+											</td>
+											<td class="has_norsp"><span class="d_norsp">2023.12.11</span></td>
+											<td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+										</tr>
+										<tr>
+											<td class="has_wpsp has_ico">
+												<input type="checkbox" class="rdchk">
+											</td>
+											<td class="has_norsp"><span class="d_norsp">300758</span></td>
+											<td class="has_norsp">
+												<a href="#" class="btn_text_obj">
+													<span class="d_norsp">홍길동</span>
+													<i class="ico search"></i>
+												</a>
+											</td>
+											<td class="has_norsp"><span class="d_norsp">2023.12.11</span></td>
+											<td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+										</tr>
+										<tr>
+											<td class="has_wpsp has_ico">
+												<input type="checkbox" class="rdchk">
+											</td>
+											<td class="has_norsp"><span class="d_norsp">300758</span></td>
+											<td class="has_norsp">
+												<a href="#" class="btn_text_obj">
+													<span class="d_norsp">홍길동</span>
+													<i class="ico search"></i>
+												</a>
+											</td>
+											<td class="has_norsp"><span class="d_norsp">2023.12.11</span></td>
+											<td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+										</tr>
+										<tr>
+											<td class="has_wpsp has_ico">
+												<input type="checkbox" class="rdchk">
+											</td>
+											<td class="has_norsp"><span class="d_norsp">300758</span></td>
+											<td class="has_norsp">
+												<a href="#" class="btn_text_obj">
+													<span class="d_norsp">홍길동</span>
+													<i class="ico search"></i>
+												</a>
+											</td>
+											<td class="has_norsp"><span class="d_norsp">2023.12.11</span></td>
+											<td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+										</tr>
+										<tr>
+											<td class="has_wpsp has_ico">
+												<input type="checkbox" class="rdchk">
+											</td>
+											<td class="has_norsp"><span class="d_norsp">300758</span></td>
+											<td class="has_norsp">
+												<a href="#" class="btn_text_obj">
+													<span class="d_norsp">홍길동</span>
+													<i class="ico search"></i>
+												</a>
+											</td>
+											<td class="has_norsp"><span class="d_norsp">2023.12.11</span></td>
+											<td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+										</tr>
+										<tr>
+											<td class="has_wpsp has_ico">
+												<input type="checkbox" class="rdchk">
+											</td>
+											<td class="has_norsp"><span class="d_norsp">300758</span></td>
+											<td class="has_norsp">
+												<a href="#" class="btn_text_obj">
+													<span class="d_norsp">홍길동</span>
+													<i class="ico search"></i>
+												</a>
+											</td>
+											<td class="has_norsp"><span class="d_norsp">2023.12.11</span></td>
+											<td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+										</tr>
+										<tr>
+											<td class="has_wpsp has_ico">
+												<input type="checkbox" class="rdchk">
+											</td>
+											<td class="has_norsp"><span class="d_norsp">300758</span></td>
+											<td class="has_norsp">
+												<a href="#" class="btn_text_obj">
+													<span class="d_norsp">홍길동</span>
+													<i class="ico search"></i>
+												</a>
+											</td>
+											<td class="has_norsp"><span class="d_norsp">2023.12.11</span></td>
+											<td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+										</tr>
+										<tr>
+											<td class="has_wpsp has_ico">
+												<input type="checkbox" class="rdchk">
+											</td>
+											<td class="has_norsp"><span class="d_norsp">300758</span></td>
+											<td class="has_norsp">
+												<a href="#" class="btn_text_obj">
+													<span class="d_norsp">홍길동</span>
+													<i class="ico search"></i>
+												</a>
+											</td>
+											<td class="has_norsp"><span class="d_norsp">2023.12.11</span></td>
+											<td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+										</tr>
+										<tr>
+											<td class="has_wpsp has_ico">
+												<input type="checkbox" class="rdchk">
+											</td>
+											<td class="has_norsp"><span class="d_norsp">300758</span></td>
+											<td class="has_norsp">
+												<a href="#" class="btn_text_obj">
+													<span class="d_norsp">홍길동</span>
+													<i class="ico search"></i>
+												</a>
+											</td>
+											<td class="has_norsp"><span class="d_norsp">2023.12.11</span></td>
+											<td class="has_wpsp has_btn"><a href="javascript:;" class="btn_csm type4 size2 d_wpsp" name="detail_call">상세보기</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="form_field_item">
+						<div class="fileui_tb_w">
+							<div class="fileui_tb">
+								<div class="fileui_td has_btn">
+									<div class="fkef_tb2_w">
+										<input type="file" class="fkef_file">
+										<a href="javascript:;" class="btn_fakefile">파일 선택</a>
+									</div>
+								</div>
+								<div class="fileui_td">
+									<div class="filename_para">선택된 파일 없음</div>
+								</div>
+								<div class="fileui_td has_btn">
+									<a href="javascript:;" class="btn_fakefile">파일 등록</a>
+								</div>
+							</div>
+						</div>
+						<div class="tbsk_tb_w">
+							<table class="tbsk_tb">
+								<thead>
+									<tr>
+										<th class="ctb2_w01">파일명</th>
+										<th class="ctb2_w02">용량</th>
+										<th class="ctb2_w03">삭제</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="has_data">첨부파일.jpg</td>
+										<td>14KB</td>
+										<td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="btn_fsm_w">
+					<div class="btn_fsm_fxwrap">
+						<a href="javascript:;" class="btn_fsm type2 d_type2"><span class="toggle_text">임시저장</span></a>
+						<a href="javascript:;" class="btn_fsm">결재요청</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- // middle -->
+
+		<!-- layer -->
+		<div class="dlayer_w" id="overtime_detail_popup">
+			<div class="dlayer_bg"></div>
+			<div class="dlayer_box">
+				<div class="dlayer_tit_low">
+					<h2 class="dlayer_tit">특근신청 상세정보</h2>
+				</div>
+				<div class="dlayer_cont_low">
+					<div class="fvtb_w type3">
+						<table class="fvtb">
+							<tbody>
+								<tr>
+									<th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+									<td class="has_fitem"><input type="text" class="fvint" disabled value="홍길동(인사팀)"></td>
+								</tr>
+								<tr>
+									<th class="has_fvth_sp"><span class="fvth_sp">소속</span></th>
+									<td class="has_fitem"><input type="text" class="fvint" disabled value="소속"></td>
+								</tr>
+								<tr>
+									<th class="has_fvth_sp"><span class="fvth_sp imp">근무사유</span></th>
+									<td class="has_fitem"><input type="text" class="fvint" disabled value="특근근무시간"></td>
+								</tr>
+								<tr>
+									<th class="has_fvth_sp"><span class="fvth_sp">출퇴근시간</span></th>
+									<td class="has_fitem">
+										<div class="inline_cols_wrap">
+											<div class="inline_cols"><input type="time" class="input_time" value="09:00"></div>
+											<div class="inline_cols else"><span class="inline_cols_else">~</span></div>
+											<div class="inline_cols"><input type="time" class="input_time" disabled value="18:00"></div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th class="has_fvth_sp"><span class="fvth_sp imp">특근시간</span></th>
+									<td class="has_fitem">
+										<div class="inline_cols_wrap">
+											<div class="inline_cols"><input type="time" class="input_time" value="18:30"></div>
+											<div class="inline_cols else"><span class="inline_cols_else">~</span></div>
+											<div class="inline_cols"><input type="time" class="input_time" value="21:00"></div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th class="has_fvth_sp"><span class="fvth_sp imp">근무시간</span></th>
+									<td class="has_fitem"><input type="time" class="input_time" value="14:30"></td>
+								</tr>
+								<tr>
+									<th class="has_fvth_sp"><span class="fvth_sp imp">근무시간분</span></th>
+									<td class="has_fitem"><input type="text" class="fvint" value="150분"></td>
+								</tr>
+								<tr>
+									<th class="has_fvth_sp ptype2"><span class="fvth_sp imp">출퇴근증명</span></th>
+									<td class="has_fitem">
+										<select class="dsel">
+											<option>지문인식(내근)</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th class="has_fvth_sp"><span class="fvth_sp imp">근무장소</span></th>
+									<td class="has_fitem"><input type="text" class="fvint"></td>
+								</tr>
+								<tr>
+									<th class="has_fvth_sp ptype2"><span class="fvth_sp imp">보상휴가<br>사용여부</span></th>
+									<td class="has_fitem">
+										<select class="dsel">
+											<option>Y/N</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th class="has_fvth_sp"><span class="fvth_sp imp">근무내용</span></th>
+									<td class="has_fitem"><textarea class="fvta"></textarea></td>
+								</tr>
+								<tr>
+									<th class="has_fvth_sp ptype2"><span class="fvth_sp">신청가능<br>시간</span></th>
+									<td class="has_fitem"><input type="time" class="input_time" disabled></td>
+								</tr>
+								<tr>
+									<th class="has_fvth_sp ptype2"><span class="fvth_sp">디폴트<br>시간</span></th>
+									<td class="has_fitem"><input type="time" class="input_time" disabled></td>
+								</tr>
+								<!-- <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">시작시간</span></th>
+                                        <td class="has_fitem"><input type="time" class="input_time" value="15:30"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">종료시간</span></th>
+                                        <td class="has_fitem"><input type="time" class="input_time" value="18:30"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">목적지</span></th>
+                                        <td class="has_fitem"><textarea class="fvta"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">행선지</span></th>
+                                        <td class="has_fitem"><textarea class="fvta"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">교통비</span></th>
+                                        <td class="has_fitem"><input type="text" class="fvint aright"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp imp">비용지급구분</span></th>
+                                        <td class="has_fitem">
+                                            <select class="dsel">
+                                                <option>선택</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="has_fvth_sp"><span class="fvth_sp">비고</span></th>
+                                        <td class="has_fitem"><textarea class="fvta"></textarea></td>
+                                    </tr> -->
+							</tbody>
+						</table>
+					</div>
+					<div class="btn_fsm_w">
+						<a href="javascript:;" class="btn_fsm">저장</a>
+					</div>
+				</div>
+				<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // layer -->
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				document.querySelectorAll("[name='detail_call']").forEach((item) => {
+					item.addEventListener("click", () => {
+						dimLayerShow({
+							target: "#overtime_detail_popup"
+						});
+					});
+				});
+
+				// 퍼블 확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+				window.addEventListener("DOMContentLoaded", () => {
+					if (url_2 === "popup") {
+						dimLayerShow({
+							target: "#overtime_detail_popup"
+						});
+					}
+				});
+			});
+
+			window.addEventListener("load", () => {
+				// scroll table
+				scrollTable();
+			});
+		</script>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('./include/head.html')
+    <body class="front_body">
+        <div class="page_wrap">
+            @@include('./include/header_sub.html', {
+				page_sub: true,
+				sub_title: "근태신청"
+			})
+
+            <!-- middle -->
+            <section class="middle_zone">
+                <div class="form_field_item_zone">
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <div class="form_field_title_row type2">
+                                <p class="form_field_title">결재선</p>
+                                <a href="javascript:;" class="btn_csm type3">결재선 지정</a>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="tbsk_tb_w">
+									<table class="tbsk_tb">
+										<thead>
+											<tr>
+												<th class="ctb_w01">구분</th>
+												<th class="ctb_w02">성명</th>
+												<th class="ctb_w03">상태</th>
+												<th class="ctb_w04">결재완료일</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>기안</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+											<tr>
+												<th>결재라인</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+											<tr>
+												<th>수신자</th>
+												<td>홍길동</td>
+												<th>결재</th>
+												<td>2020.06.25</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="form_field_title_row type2">
+                                <p class="form_field_title">휴가신청서</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="fvtb_w type3">
+                                    <table class="fvtb">
+                                        <tbody>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+                                                <td class="has_fitem">
+                                                    <div class="inline_cols_wrap gap_type2 auto_type2">
+                                                        <div class="inline_cols"><input type="text" class="fvint" value="2806004" style="width:80px"></div>
+                                                        <div class="inline_cols">
+                                                            <div class="inline_inflex_wrap">
+                                                                <a href="#" class="btn_text_obj type2">
+                                                                    <span class="d_norsp">오팀장(NEW)</span>
+                                                                    <i class="ico search"></i>
+                                                                </a>
+                                                                <span class="fitem_data">인재경영실</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">근태종류</span></th>
+                                                <td class="has_fitem">
+                                                    <div class="inline_cols_wrap gap_type2 auto_type2">
+                                                        <div class="inline_cols"><input type="text" class="fvint" style="width:80px" value="보상휴가"></div>
+                                                        <div class="inline_cols"><span class="fitem_data">감산일수(-4.5)</span></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">근태기간</span></th>
+                                                <td class="has_fitem">
+                                                    <div class="inline_cols_wrap">
+                                                        <div class="inline_cols"><input type="time" class="input_calendar" value="2023.12.25"></div>
+                                                        <div class="inline_cols else"><span class="inline_cols_else">~</span></div>
+                                                        <div class="inline_cols"><input type="time" class="input_calendar" value="2023.12.27"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="form_field_title_row type2">
+                                <p class="form_field_title">특근내역</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="tbsk_tb_w scroll_has">
+                                    <table class="tbsk_tb">
+                                        <thead>
+                                            <tr>
+                                                <th>번호</th>
+                                                <th>근무시간</th>
+                                                <th>시작시간</th>
+                                                <th>종료시간</th>
+                                                <th>근무시간</th>
+                                                <th class="ptype2">근무시간환산<br>(근무시간*1.5)</th>
+                                                <th>잔여시간</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="tb_data">1</span></td>
+                                                <td><span class="tb_data">2023.01.28</span></td>
+                                                <td><span class="tb_data">11:40</span></td>
+                                                <td><span class="tb_data">14:40</span></td>
+                                                <td><span class="tb_data">3</span></td>
+                                                <td><span class="tb_data">4.5</span></td>
+                                                <td><span class="tb_data">4.5</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tb_data">2</span></td>
+                                                <td><span class="tb_data">2023.01.28</span></td>
+                                                <td><span class="tb_data">11:40</span></td>
+                                                <td><span class="tb_data">14:40</span></td>
+                                                <td><span class="tb_data">3</span></td>
+                                                <td><span class="tb_data">4.5</span></td>
+                                                <td><span class="tb_data">4.5</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tb_data">3</span></td>
+                                                <td><span class="tb_data">2023.01.28</span></td>
+                                                <td><span class="tb_data">11:40</span></td>
+                                                <td><span class="tb_data">14:40</span></td>
+                                                <td><span class="tb_data">3</span></td>
+                                                <td><span class="tb_data">4.5</span></td>
+                                                <td><span class="tb_data">4.5</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tb_data">4</span></td>
+                                                <td><span class="tb_data">2023.01.28</span></td>
+                                                <td><span class="tb_data">11:40</span></td>
+                                                <td><span class="tb_data">14:40</span></td>
+                                                <td><span class="tb_data">3</span></td>
+                                                <td><span class="tb_data">4.5</span></td>
+                                                <td><span class="tb_data">4.5</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tb_data">5</span></td>
+                                                <td><span class="tb_data">2023.01.28</span></td>
+                                                <td><span class="tb_data">11:40</span></td>
+                                                <td><span class="tb_data">14:40</span></td>
+                                                <td><span class="tb_data">3</span></td>
+                                                <td><span class="tb_data">4.5</span></td>
+                                                <td><span class="tb_data">4.5</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="indent_text_item_list redimp mt10 pboth10 wordbreak">
+                                    <li>
+                                        <span class="indent_bullet">*</span>
+                                        <span class="indent_text_group">특근일자가 현재일보다 작고, 잔여시간이 존재하는 겨웅에만 조회됩니다.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="form_field_title_row type2">
+                                <p class="form_field_title">보상휴가 신청</p>
+                                <a href="javascript:;" class="btn_csm type3">입력</a>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="data_tb_w scroll_has">
+									<table class="data_tb type2">
+										<thead>
+											<tr>
+												<th class="has_norsp has_num"><span class="d_norsp">번호</span></th>
+												<th class="has_norsp"><span class="d_norsp">근무일자</span></th>
+												<th class="has_norsp"><span class="d_norsp">신청일자</span></th>
+												<th class="has_norsp"><span class="d_norsp">신청시간</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+                                                <td class="has_num"><span class="data_text">1</span></td>
+												<td class="has_item">
+													<input type="date" class="input_calendar" value="2020-12-26">
+												</td>
+												<td class="has_item">
+													<input type="date" class="input_calendar" value="2020-12-26">
+												</td>
+												<td class="has_item">
+													<input type="text" class="fvint acenter" value="1">
+												</td>
+											</tr>
+											<tr>
+                                                <td class="has_num"><span class="data_text">2</span></td>
+												<td class="has_item">
+													<input type="date" class="input_calendar" value="2020-12-26">
+												</td>
+												<td class="has_item">
+													<input type="date" class="input_calendar" value="2020-12-26">
+												</td>
+												<td class="has_item">
+													<input type="text" class="fvint acenter" value="1">
+												</td>
+											</tr>
+											<tr>
+                                                <td class="has_num"><span class="data_text">3</span></td>
+												<td class="has_item">
+													<input type="date" class="input_calendar" value="2020-12-26">
+												</td>
+												<td class="has_item">
+													<input type="date" class="input_calendar" value="2020-12-26">
+												</td>
+												<td class="has_item">
+													<input type="text" class="fvint acenter" value="1.5">
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="form_field_title_row type2">
+                                <p class="form_field_title">자녀돌봄휴가 신청</p>
+                                <a href="javascript:;" class="btn_csm type3">입력</a>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="data_tb_w scroll_has">
+									<table class="data_tb type2">
+										<thead>
+											<tr>
+												<th class="has_norsp has_num"><span class="d_norsp">번호</span></th>
+												<th class="has_norsp"><span class="d_norsp">자녀성명</span></th>
+												<th class="has_norsp"><span class="d_norsp">신청일자</span></th>
+												<th class="has_norsp"><span class="d_norsp">신청시간</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+                                                <td class="has_num"><span class="data_text">1</span></td>
+												<td>
+													<a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">전소윤</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+												</td>
+												<td class="has_item">
+													<input type="date" class="input_calendar" value="2020-12-26">
+												</td>
+												<td class="has_item">
+													<input type="text" class="fvint acenter" value="1">
+												</td>
+											</tr>
+											<tr>
+                                                <td class="has_num"><span class="data_text">2</span></td>
+												<td>
+													<a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">전소윤</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+												</td>
+												<td class="has_item">
+													<input type="date" class="input_calendar" value="2020-12-26">
+												</td>
+												<td class="has_item">
+													<input type="text" class="fvint acenter" value="1">
+												</td>
+											</tr>
+											<tr>
+                                                <td class="has_num"><span class="data_text">3</span></td>
+												<td>
+													<a href="#" class="btn_text_obj">
+                                                        <span class="d_norsp">전소윤</span>
+                                                        <i class="ico search"></i>
+                                                    </a>
+												</td>
+												<td class="has_item">
+													<input type="date" class="input_calendar" value="2020-12-26">
+												</td>
+												<td class="has_item">
+													<input type="text" class="fvint acenter" value="1">
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="fileui_tb_w">
+                                <div class="fileui_tb">
+                                    <div class="fileui_td has_btn">
+                                        <div class="fkef_tb2_w">
+                                            <input type="file" class="fkef_file">
+                                            <a href="javascript:;" class="btn_fakefile">파일 선택</a>
+                                        </div>
+                                    </div>
+                                    <div class="fileui_td">
+                                        <div class="filename_para">선택된 파일 없음</div>
+                                    </div>
+                                    <div class="fileui_td has_btn">
+                                        <a href="javascript:;" class="btn_fakefile">파일 등록</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tbsk_tb_w">
+                                <table class="tbsk_tb">
+                                    <thead>
+                                        <tr>
+                                            <th class="ctb2_w01">파일명</th>
+                                            <th class="ctb2_w02">용량</th>
+                                            <th class="ctb2_w03">삭제</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="has_data">첨부파일.jpg</td>
+                                            <td>14KB</td>
+                                            <td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_fsm_w">
+                        <div class="btn_fsm_fxwrap">
+                            <a href="javascript:;" class="btn_fsm type2 d_type2"><span class="toggle_text">임시저장</span></a>
+                            <a href="javascript:;" class="btn_fsm">결재요청</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // middle -->
+        </div>
+    </body>
+</html>
