@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1680" />
+	<link rel="stylesheet" href="./assets/css/reset.css" />
+	<link rel="stylesheet" href="./assets/css/jqueryui.css" />
+	<link rel="stylesheet" href="./assets/css/swiper.min.css" />
+	<link rel="stylesheet" href="./assets/css/layout.css" />
+	<link rel="stylesheet" href="./assets/css/contents.css" />
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/jquery-ui.js"></script>
+	<script src="./assets/js/swiper.min.js"></script>
+	<script src="./assets/js/ui.js"></script>
+	<title></title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<!-- gnb -->
+		<section class="gnb_zone">
+			<nav class="gnb_wrap">
+				<ul class="gnb_list">
+					<li>
+						<a href="#" class="gnb_one shape_01"><span class="hdtext">인사기획</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_02"><span class="hdtext">인사운영</span></a>
+						<div class="gnb_depth_wrap">
+							<div class="gnb_depth_container">
+								<div class="fixed_row">
+									<p class="gnb_depth_title">인사운영</p>
+									<div class="search_field">
+										<input type="text" class="search_input" placeholder="메뉴 검색">
+										<button class="btn_search_submit"><span class="hdtext">검색</span></button>
+									</div>
+									<button class="btn_depth_toggle"><span class="hdtext">메뉴 열기/닫기</span></button>
+								</div>
+								<div class="liquid_row">
+									<div class="gnb_acc_wrap">
+										<ul class="gnb_acc_list">
+											<li class="active">
+												<a href="#" class="acc_one"><span class="acc_menu_text">급여관리</span></a>
+												<div class="acc_two_depth">
+													<ul class="acc_two_list">
+														<li class="active">
+															<a href="#" class="acc_two"><span class="acc_two_text">기준관리</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">코드관리(급여)</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">급여계산기준</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">급여업무기준</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">일할계산지급율관리</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">간이세액조견표</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">계약관리</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">급여기본</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">성과급관리</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">계산기초</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">급여계산</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">급여결과확인</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">예산관리</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<a href="#" class="acc_one"><span class="acc_menu_text">퇴직금</span></a>
+												<div class="acc_two_depth">
+													<ul class="acc_two_list">
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 01</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 02</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<a href="#" class="acc_one"><span class="acc_menu_text">퇴직추계</span></a>
+												<div class="acc_two_depth">
+													<ul class="acc_two_list">
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 01</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 02</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<a href="#" class="acc_one"><span class="acc_menu_text">연말정산</span></a>
+												<div class="acc_two_depth">
+													<ul class="acc_two_list">
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 01</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 02</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<a href="#" class="acc_one"><span class="acc_menu_text">근로소득간이지급명세</span></a>
+												<div class="acc_two_depth">
+													<ul class="acc_two_list">
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 01</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 02</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_03"><span class="hdtext">HR통계</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_04"><span class="hdtext">인재육성</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_05"><span class="hdtext">성과관리</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_06"><span class="hdtext">급여관리</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_07"><span class="hdtext">복리후생</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_08"><span class="hdtext">신청결재</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_09"><span class="hdtext">시스템관리</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_10"><span class="hdtext">즐겨찾기</span></a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		<!-- // gnb -->
+		<div class="middle_contents">
+			<!-- header -->
+			<header class="header_zone">
+				<hgroup class="header_group">
+					<h1 class="toplogo_title"><a href="#" class="toplogo_link"><img src="./assets/images/toplogo.png" alt=""></a></h1>
+					<div class="head_util_list_w">
+						<ul class="head_util_list">
+							<li>
+								<div class="hlogdata hutil_item">
+									<a href="javascript:;" class="hlog_target"><span class="hlog_tin">시스템 총괄</span></a>
+									<div class="hlog_layer">
+										<ul class="hlogopt_list">
+											<li><a href="javascript:;" class="hlogopt">시스템 총괄</a></li>
+											<li><a href="javascript:;" class="hlogopt">테스트</a></li>
+											<li><a href="javascript:;" class="hlogopt">테스트3</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="utilmenu_wrap hutil_item">
+									<ul class="utilmenu_list">
+										<li><a href="#" class="utilmenu shape_home"><span class="hdtext">홈</span></a></li>
+										<li><a href="#" class="utilmenu shape_star"><span class="hdtext">즐겨찾기</span></a></li>
+										<li><a href="#" class="utilmenu shape_rock"><span class="hdtext">보안</span></a></li>
+										<li>
+											<div class="util_haslayer_item">
+												<a href="#" class="utilmenu shape_notice">
+													<span class="hdtext">알림</span>
+													<span class="utilmenu_count">10</span>
+												</a>
+												<div class="utilmenu_layer">
+													<ul class="bullet_notice_list">
+														<li>신인사시스템 오픈 일정 안내</li>
+														<li>인사시스템 안정화 기간 불편사항 접수</li>
+														<li>사용자 매뉴얼 공지</li>
+														<li>인사시스템 전자결재 미결 4/8일</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li><a href="#" class="utilmenu shape_setting"><span class="hdtext">설정</span></a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</hgroup>
+			</header>
+			<!-- // header -->
+			<!-- middle -->
+			<section class="middle_zone">
+				<div class="sub_contents_wrap">
+					<div class="sub_cbox_top">
+						<div class="liquid_cols midtab_list_w">
+							<ul class="midtab_list">
+								<li>
+									<div class="midtab active">
+										<a href="javascript:;" class="midtab_ico"></a>
+										<span class="midtab_text">인사기본(담당)</span>
+										<a href="javascript:;" class="btn_midtabclose"><span class="hdtext">닫기</span></a>
+									</div>
+								</li>
+								<li>
+									<div class="midtab">
+										<a href="javascript:;" class="midtab_ico"></a>
+										<span class="midtab_text">인사기본(개인)</span>
+										<a href="javascript:;" class="btn_midtabclose"><span class="hdtext">닫기</span></a>
+									</div>
+								</li>
+								<li>
+									<div class="midtab">
+										<a href="javascript:;" class="midtab_ico ico02"></a>
+										<span class="midtab_text">인사기본(감사)</span>
+										<a href="javascript:;" class="btn_midtabclose"><span class="hdtext">닫기</span></a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="fixed_cols btn_mlogcont_tb">
+							<div class="btn_mlogcont_td mlogc01">
+								<div class="btn_mlogcin_tb">
+									<div class="btn_mlogcin_td"><a href="javascript:;" class="btn_mlogcin mlogprev"></a></div>
+									<div class="btn_mlogcin_td"><a href="javascript:;" class="btn_mlogcin mlognext"></a></div>
+								</div>
+							</div>
+							<div class="btn_mlogcont_td mlogc02">
+								<a href="javascript:;" class="btn_mlogcin mlogdel"></a>
+							</div>
+						</div>
+					</div>
+					<div class="sub_cbox_container">
+						<div class="search_form_box skin2">
+							<div class="long_cols">
+								<ul class="search_form_tb_list">
+									<li>
+										<table class="search_form_tb">
+											<tr>
+												<th><span class="search_form_key">기준일</span></th>
+												<td>
+													<div class="datepicker_item resize_wid_set">
+														<input type="text" class="form_input datepicker" value="2024.11.13">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th><span class="search_form_key">계약종료일</span></th>
+												<td>
+													<ul class="inline_form_list nobreak">
+														<li class="liquid">
+															<div class="datepicker_item resize_wid_get">
+																<input type="text" class="form_input datepicker">
+															</div>
+														</li>
+														<li class="part"><span class="inline_part_word">~</span></li>
+														<li class="liquid">
+															<div class="datepicker_item">
+																<input type="text" class="form_input datepicker">
+															</div>
+														</li>
+													</ul>
+												</td>
+											</tr>
+										</table>
+									</li>
+									<li>
+										<table class="search_form_tb">
+											<tr>
+												<th><span class="search_form_key">계약유형</span></th>
+												<td><select class="form_select resize_wid_set"><option>전체</option></select></td>
+											</tr>
+											<tr>
+												<th><span class="search_form_key">소속</span></th>
+												<td>
+													<ul class="inline_form_list resize_break">
+														<li class="liquid">
+															<ul class="inline_form_list items_type nobreak">
+																<li class="liquid"><input type="text" class="form_input resize_wid_get"></li>
+																<li class="liquid"><input type="text" class="form_input"></li>
+																<li class="short"><button class="btn_inline_search"><span class="hdtext">검색</span></button></li>
+															</ul>
+														</li>
+														<li class="short">
+															<div class="props_item">
+																<input type="checkbox" class="props_form" id="search_chk02">
+																<label for="search_chk02" class="props_label">하위조직포함</label>
+															</div>
+														</li>
+													</ul>
+												</td>
+											</tr>
+										</table>
+									</li>
+									<li>
+										<table class="search_form_tb">
+											<tr>
+												<th><span class="search_form_key">급여유형</span></th>
+												<td><select class="form_select resize_wid_set"><option>전체</option></select></td>
+											</tr>
+											<tr>
+												<th><span class="search_form_key">사원</span></th>
+												<td>
+													<ul class="inline_form_list items_type">
+														<li class="liquid"><input type="text" class="form_input resize_wid_get"></li>
+														<li class="liquid"><input type="text" class="form_input" disabled></li>
+														<li class="short"><button class="btn_inline_search"><span class="hdtext">검색</span></button></li>
+													</ul>
+												</td>
+											</tr>
+										</table>
+									</li>
+									<li>
+										<table class="search_form_tb">
+											<tr>
+												<th><span class="search_form_key">직원구분</span></th>
+												<td><select class="form_select autoitem"><option>전체</option></select></td>
+											</tr>
+											<tr>
+												<th><span class="search_form_key">주민번호뒷자리표시</span></th>
+												<td>
+													<ul class="inline_form_list items_type gap_type3 mintype">
+														<li><input type="checkbox" class="props_form" id="mark_view_01"></li>
+														<li>
+															<div class="props_item reverse">
+																<input type="checkbox" class="props_form" id="mark_view_02">
+																<span class="props_label">퇴직자포함</span>
+															</div>
+														</li>
+													</ul>
+												</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+							</div>
+							<div class="short_cols">
+								<a href="#" class="btn_search_form_submit"><span class="submit_text">조회</span></a>
+							</div>
+						</div>
+						<div class="bottom_guide_copy_wrap">
+							<ul class="guide_copy_list">
+								<li><p class="guide_copy">호봉일 경우는 기본급에 0으로 입력바랍니다.</p></li>
+							</ul>
+						</div>
+						<div class="cbox_block_wrap">
+							<div class="cbox_block">
+								<div class="cbox_title_row">
+									<div class="liquid_cols">
+										<p class="cb_title">계약관리</p>
+									</div>	
+									<div class="short_cols">
+										<ul class="btn_box_list">
+											<li><a href="#" class="btn_box skin2 min_size"><span class="btn_box_text">행복사</span></a></li>
+											<li><a href="#" class="btn_box skin3 min_size"><span class="btn_box_text">입력</span></a></li>
+											<li><a href="#" class="btn_box skin2 min_size"><span class="btn_box_text">저장</span></a></li>
+											<li><a href="#" class="btn_box skin3 min_size"><span class="btn_box_text">업로드</span></a></li>
+											<li><a href="#" class="btn_box skin2 min_size"><span class="btn_box_text">다운로드</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="cbox_contents">
+									<!-- 테이블 영역 -->
+									<div class="data_tb_zone" id="data_tb_zone" data-scrollheight="8">
+										<div class="data_thead_row">
+											<div class="data_thead_container">
+												<div class="data_fixed_cols">
+													<table class="data_thead_tb">
+														<tr>
+															<th><div class="cell_inner"><span class="data_thead_text">번호</span></div></th>
+															<th><div class="cell_inner"><span class="data_thead_text">상태</span></div></th>
+															<th><div class="cell_inner"><span class="data_thead_text"><input type="checkbox" class="props_form"><span class="thead_inner_text">삭제</span></span></div></th>
+															<th><div class="cell_inner"><span class="data_thead_text">공개</span></div></th>
+															<th><div class="cell_inner"><span class="data_thead_text">소속</span></div></th>
+															<th><div class="cell_inner"><span class="data_thead_text">직급</span></div></th>
+															<th><div class="cell_inner"><span class="data_thead_text">직책</span></div></th>
+															<th><div class="cell_inner"><span class="data_thead_text">호칭</span></div></th>
+															<th><div class="cell_inner"><span class="data_thead_text">사번</span></div></th>
+															<th><div class="cell_inner"><span class="data_thead_text has_dot">성명</span></div></th>
+														</tr>
+													</table>
+												</div>
+												<div class="data_liquid_cols">
+													<div class="data_thead_tb_wrap">
+														<table class="data_thead_tb">
+															<tr>
+																<th><div class="cell_inner"><span class="data_thead_text">주민번호</span></div></th>
+																<th><div class="cell_inner"><span class="data_thead_text">직원구분</span></div></th>
+																<th><div class="cell_inner"><span class="data_thead_text has_dot">계약유형</span></div></th>
+																<th><div class="cell_inner"><span class="data_thead_text has_dot">계약금액</span></div></th>
+																<th><div class="cell_inner"><span class="data_thead_text has_dot">계약시작일</span></div></th>
+																<th><div class="cell_inner"><span class="data_thead_text has_dot">계약종료일</span></div></th>
+																<th><div class="cell_inner"><span class="data_thead_text">재계약일</span></div></th>
+																<th><div class="cell_inner"><span class="data_thead_text">DC전환일</span></div></th>
+																<th><div class="cell_inner"><span class="data_thead_text has_dot">급여유형</span></div></th>
+																<th><div class="cell_inner"><span class="data_thead_text has_dot">복리후생그룹</span></div></th>
+																<th><div class="cell_inner"><span class="data_thead_text has_dot">근속시작일</span></div></th>
+																<th><div class="cell_inner"><span class="data_thead_text has_dot">근속종료일</span></div></th>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>	
+										<div class="data_tbody_row">
+											<div class="data_tbody_container">
+												<div class="data_fixed_cols">
+													<div class="data_tbody_fixed_tb_wrap">
+														<table class="data_tbody_tb">
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">번호</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">텍스트</span></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">일반계약직</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">팀원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">전문위원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">3000676</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">번호</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">텍스트</span></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">일반계약직</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">팀원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">전문위원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">3000676</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">번호</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">텍스트</span></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">일반계약직</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">팀원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">전문위원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">3000676</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">번호</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">텍스트</span></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">일반계약직</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">팀원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">전문위원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">3000676</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">번호</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">텍스트</span></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">일반계약직</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">팀원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">전문위원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">3000676</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">번호</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">텍스트</span></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">일반계약직</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">팀원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">전문위원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">3000676</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">번호</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">텍스트</span></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">일반계약직</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">팀원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">전문위원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">3000676</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">번호</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">텍스트</span></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">일반계약직</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">팀원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">전문위원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">3000676</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">번호</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">텍스트</span></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">일반계약직</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">팀원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">전문위원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">3000676</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">번호</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">텍스트</span></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td><div class="cell_inner"><input type="checkbox" class="props_form"></div></td>
+																<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">일반계약직</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">팀원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">전문위원</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">3000676</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></div></td>
+															</tr>
+														</table>
+													</div>
+													<div class="data_tbody_fraction_row">
+														<div class="data_tbody_fraction">
+															<span class="data_fraction_current">11</span>
+															<span class="data_fraction_part">/</span>
+															<span class="data_fraction_length">345</span>
+														</div>
+													</div>
+												</div>
+												<div class="data_liquid_cols">
+													<div class="data_tbody_tb_wrap">
+														<table class="data_tbody_tb">
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">840610-1*****</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">비정규직</span></div></td>
+																<td><div class="cell_inner"><select class="form_select type2"><option>연봉직</option></select></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">0</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">연봉</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">화이트정보통신</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">840610-1*****</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">비정규직</span></div></td>
+																<td><div class="cell_inner"><select class="form_select type2"><option>연봉직</option></select></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">0</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">연봉</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">화이트정보통신</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">840610-1*****</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">비정규직</span></div></td>
+																<td><div class="cell_inner"><select class="form_select type2"><option>연봉직</option></select></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">0</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">연봉</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">화이트정보통신</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">840610-1*****</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">비정규직</span></div></td>
+																<td><div class="cell_inner"><select class="form_select type2"><option>연봉직</option></select></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">0</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">연봉</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">화이트정보통신</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">840610-1*****</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">비정규직</span></div></td>
+																<td><div class="cell_inner"><select class="form_select type2"><option>연봉직</option></select></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">0</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">연봉</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">화이트정보통신</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">840610-1*****</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">비정규직</span></div></td>
+																<td><div class="cell_inner"><select class="form_select type2"><option>연봉직</option></select></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">0</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">연봉</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">화이트정보통신</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">840610-1*****</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">비정규직</span></div></td>
+																<td><div class="cell_inner"><select class="form_select type2"><option>연봉직</option></select></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">0</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">연봉</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">화이트정보통신</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">840610-1*****</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">비정규직</span></div></td>
+																<td><div class="cell_inner"><select class="form_select type2"><option>연봉직</option></select></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">0</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">연봉</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">화이트정보통신</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">840610-1*****</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">비정규직</span></div></td>
+																<td><div class="cell_inner"><select class="form_select type2"><option>연봉직</option></select></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">0</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">연봉</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">화이트정보통신</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+															</tr>
+															<tr>
+																<td><div class="cell_inner"><span class="data_tbody_text">840610-1*****</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">비정규직</span></div></td>
+																<td><div class="cell_inner"><select class="form_select type2"><option>연봉직</option></select></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">0</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">연봉</span></div></td>
+																<td><div class="cell_inner"><span class="data_tbody_text">화이트정보통신</span></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+																<td><div class="cell_inner"><input type="text" class="datapicker_inform" value="2024.05.29"></div></td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- // 테이블 영역 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<script>
+				document.addEventListener("DOMContentLoaded",()=>{
+					H5.datepicker();
+				});
+				window.addEventListener("load",()=>{
+					H5.searchBox();
+					H5.dataTable("#data_tb_zone");
+				});
+			</script>
+			<!-- // middle -->
+		</div>
+	</div>
+</body>
+
+</html>

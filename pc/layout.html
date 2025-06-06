@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1680" />
+	<link rel="stylesheet" href="./assets/css/reset.css" />
+	<link rel="stylesheet" href="./assets/css/jqueryui.css" />
+	<link rel="stylesheet" href="./assets/css/swiper.min.css" />
+	<link rel="stylesheet" href="./assets/css/layout.css" />
+	<link rel="stylesheet" href="./assets/css/contents.css" />
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/jquery-ui.js"></script>
+	<script src="./assets/js/swiper.min.js"></script>
+	<script src="./assets/js/ui.js"></script>
+	<title></title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<!-- gnb -->
+		<section class="gnb_zone">
+			<nav class="gnb_wrap">
+				<ul class="gnb_list">
+					<li>
+						<a href="#" class="gnb_one shape_01"><span class="hdtext">인사기획</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_02"><span class="hdtext">인사운영</span></a>
+						<div class="gnb_depth_wrap">
+							<div class="gnb_depth_container">
+								<div class="fixed_row">
+									<p class="gnb_depth_title">인사운영</p>
+									<div class="search_field">
+										<input type="text" class="search_input" placeholder="메뉴 검색">
+										<button class="btn_search_submit"><span class="hdtext">검색</span></button>
+									</div>
+									<button class="btn_depth_toggle"><span class="hdtext">메뉴 열기/닫기</span></button>
+								</div>
+								<div class="liquid_row">
+									<div class="gnb_acc_wrap">
+										<ul class="gnb_acc_list">
+											<li class="active">
+												<a href="#" class="acc_one"><span class="acc_menu_text">급여관리</span></a>
+												<div class="acc_two_depth">
+													<ul class="acc_two_list">
+														<li class="active">
+															<a href="#" class="acc_two"><span class="acc_two_text">기준관리</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">코드관리(급여)</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">급여계산기준</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">급여업무기준</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">일할계산지급율관리</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">간이세액조견표</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">계약관리</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">급여기본</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">성과급관리</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">계산기초</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">급여계산</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">급여결과확인</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">예산관리</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<a href="#" class="acc_one"><span class="acc_menu_text">퇴직금</span></a>
+												<div class="acc_two_depth">
+													<ul class="acc_two_list">
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 01</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 02</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<a href="#" class="acc_one"><span class="acc_menu_text">퇴직추계</span></a>
+												<div class="acc_two_depth">
+													<ul class="acc_two_list">
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 01</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 02</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<a href="#" class="acc_one"><span class="acc_menu_text">연말정산</span></a>
+												<div class="acc_two_depth">
+													<ul class="acc_two_list">
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 01</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 02</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<a href="#" class="acc_one"><span class="acc_menu_text">근로소득간이지급명세</span></a>
+												<div class="acc_two_depth">
+													<ul class="acc_two_list">
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 01</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+														<li>
+															<a href="#" class="acc_two"><span class="acc_two_text">메뉴 02</span></a>
+															<div class="acc_three_wrap">
+																<ul class="acc_three_list">
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																	<li><a href="#" class="acc_three"><span class="acc_three_text">메뉴</span></a></li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_03"><span class="hdtext">HR통계</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_04"><span class="hdtext">인재육성</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_05"><span class="hdtext">성과관리</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_06"><span class="hdtext">급여관리</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_07"><span class="hdtext">복리후생</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_08"><span class="hdtext">신청결재</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_09"><span class="hdtext">시스템관리</span></a>
+					</li>
+					<li>
+						<a href="#" class="gnb_one shape_10"><span class="hdtext">즐겨찾기</span></a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		<!-- // gnb -->
+		<div class="middle_contents">
+			<!-- header -->
+			<header class="header_zone">
+				<hgroup class="header_group">
+					<h1 class="toplogo_title"><a href="#" class="toplogo_link"><img src="./assets/images/toplogo.png" alt=""></a></h1>
+					<div class="head_util_list_w">
+						<ul class="head_util_list">
+							<li>
+								<div class="hlogdata hutil_item">
+									<a href="javascript:;" class="hlog_target"><span class="hlog_tin">시스템 총괄</span></a>
+									<div class="hlog_layer">
+										<ul class="hlogopt_list">
+											<li><a href="javascript:;" class="hlogopt">시스템 총괄</a></li>
+											<li><a href="javascript:;" class="hlogopt">테스트</a></li>
+											<li><a href="javascript:;" class="hlogopt">테스트3</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="utilmenu_wrap hutil_item">
+									<ul class="utilmenu_list">
+										<li><a href="#" class="utilmenu shape_home"><span class="hdtext">홈</span></a></li>
+										<li><a href="#" class="utilmenu shape_star"><span class="hdtext">즐겨찾기</span></a></li>
+										<li><a href="#" class="utilmenu shape_rock"><span class="hdtext">보안</span></a></li>
+										<li>
+											<div class="util_haslayer_item">
+												<a href="#" class="utilmenu shape_notice">
+													<span class="hdtext">알림</span>
+													<span class="utilmenu_count">10</span>
+												</a>
+												<div class="utilmenu_layer">
+													<ul class="bullet_notice_list">
+														<li>신인사시스템 오픈 일정 안내</li>
+														<li>인사시스템 안정화 기간 불편사항 접수</li>
+														<li>사용자 매뉴얼 공지</li>
+														<li>인사시스템 전자결재 미결 4/8일</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<!-- 20241119 변경 -->
+										<li>
+											<div class="util_haslayer_item type2">
+												<a href="#" class="utilmenu shape_setting"><span class="hdtext">설정</span></a>
+												<div class="utilmenu_layer">
+													<ul class="utilmenu_depth_list">
+														<li><a href="#" class="btn_utilmenu_depth">비밀번호 변경</a></li>
+														<li><a href="#" class="btn_utilmenu_depth">위젯 설정</a></li>
+														<li><a href="#" class="btn_utilmenu_depth">테마 변경</a></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<!-- // 20241119 변경 -->
+									</ul>
+								</div>
+							</li>
+							<!-- 20241119 추가 -->
+							<li>
+								<a href="javascript:;" class="btn_utilbox"><span class="utilbox_text">로그아웃</span></a>
+							</li>
+							<!-- // 20241119 추가 -->
+						</ul>
+					</div>
+				</hgroup>
+			</header>
+			<!-- // header -->
+			<!-- middle -->
+			<main class="middle_zone">
+				내용이 들어갑니다.
+			</main>
+			<!-- // middle -->
+		</div>
+	</div>
+</body>
+
+</html>
