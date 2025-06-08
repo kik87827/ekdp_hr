@@ -73,7 +73,178 @@
 
 		<!-- middle -->
 		<section class="middle_zone">
-			내용이 들어갑니다.
+			<div class="form_field_item_zone">
+				<div class="form_field_item_group">
+					<div class="form_field_item">
+						<div class="form_field_title_row type2">
+							<p class="form_field_title">결재선</p>
+							<a href="javascript:;" class="btn_csm type3">결재선 지정</a>
+						</div>
+						<div class="form_field_content_row">
+							<div class="tbsk_tb_w">
+								<table class="tbsk_tb">
+									<thead>
+										<tr>
+											<th class="ctb_w01">구분</th>
+											<th class="ctb_w02">성명</th>
+											<th class="ctb_w03">상태</th>
+											<th class="ctb_w04">결재완료일</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>기안</th>
+											<td>홍길동</td>
+											<th>결재</th>
+											<td>2020.06.25</td>
+										</tr>
+										<tr>
+											<th>결재라인</th>
+											<td>홍길동</td>
+											<th>결재</th>
+											<td>2020.06.25</td>
+										</tr>
+										<tr>
+											<th>수신자</th>
+											<td>홍길동</td>
+											<th>결재</th>
+											<td>2020.06.25</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="form_field_item">
+						<div class="form_field_title_row type2">
+							<p class="form_field_title">휴가신청서</p>
+						</div>
+						<div class="form_field_content_row">
+							<div class="form_field_block">
+								<div class="form_field_block_content">
+									<div class="fvtb_w type3">
+										<table class="fvtb">
+											<tbody>
+												<tr>
+													<th class="has_fvth_sp"><span class="fvth_sp imp">신청자</span></th>
+													<td class="has_fitem">
+														<div class="search_form_container type2">
+															<input type="text" class="input_search" disabled value="김현대">
+															<a href="#" class="btn_search_form_submit" id="btn_search_call"><span class="hdtext">검색</span></a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th class="has_fvth_sp"><span class="fvth_sp imp">신청일</span></th>
+													<td class="has_fitem">
+														<input type="date" class="input_calendar" disabled="" value="2020-12-26">
+													</td>
+												</tr>
+												<tr>
+													<th class="has_fvth_sp"><span class="fvth_sp imp">근태종류</span></th>
+													<td class="has_fitem">
+														<select class="dsel">
+															<option>휴일대체</option>
+														</select>
+													</td>
+												</tr>
+												<tr>
+													<th class="has_fvth_sp"><span class="fvth_sp imp">근무휴일</span></th>
+													<td class="has_fitem">
+														<input type="date" class="input_calendar" style="width:95px">
+													</td>
+												</tr>
+												<tr>
+													<th class="has_fvth_sp"><span class="fvth_sp imp">휴가기간</span></th>
+													<td class="has_fitem">
+														<div class="inline_item_group vtype2">
+															<div class="inline_item_long"><input type="date" class="input_calendar"></div>
+															<div class="inline_item_long"><input type="date" class="input_calendar"></div>
+															<div class="inline_item">
+																<span class="inline_item_text">감산(0.5)일</span>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th class="has_fvth_sp"><span class="fvth_sp">반차사용</span></th>
+													<td class="has_fitem">
+														<select class="dsel" style="width:95px">
+															<option>선택</option>
+														</select>
+													</td>
+												</tr>
+												<tr>
+													<th class="has_fvth_sp"><span class="fvth_sp imp">휴일근무사유</span></th>
+													<td class="has_fitem">
+														<input type="text" class="fvint" />
+													</td>
+												</tr>
+												<tr>
+													<th class="has_fvth_sp"><span class="fvth_sp">비고</span></th>
+													<td class="has_fitem">
+														<input type="text" class="fvint" />
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="note_wrap">
+										<ul class="bullet_para_list">
+											<li>토, 일 근무는 근무한 휴일이 속한 해당주의 평일을 휴일대체로 지정합니다.</li>
+											<li>공휴일 및 약정휴일은 근무한 휴일을 기준으로 2주 이내 기간 중에서 평일을 휴일대체로 지정합니다.</li>
+											<li>근로자의 날(5월1일)은 휴일대체를 신청 할 수 없습니다.</li>
+											<li>결재자(승인자) 지정 : 직속 상위자 기준(팀원 → 팀장/지점장, 팀장/지점장 → 담당임원/부서장)</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_field_item">
+						<div class="fileui_tb_w">
+							<div class="fileui_tb">
+								<div class="fileui_td has_btn">
+									<div class="fkef_tb2_w">
+										<input type="file" class="fkef_file">
+										<a href="javascript:;" class="btn_fakefile">파일 선택</a>
+									</div>
+								</div>
+								<div class="fileui_td">
+									<div class="filename_para">선택된 파일 없음</div>
+								</div>
+								<div class="fileui_td has_btn">
+									<a href="javascript:;" class="btn_fakefile">파일 등록</a>
+								</div>
+							</div>
+						</div>
+						<div class="tbsk_tb_w">
+							<table class="tbsk_tb">
+								<thead>
+									<tr>
+										<th class="ctb2_w01">파일명</th>
+										<th class="ctb2_w02">용량</th>
+										<th class="ctb2_w03">삭제</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="has_data">첨부파일.jpg</td>
+										<td>14KB</td>
+										<td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="btn_fsm_w">
+					<div class="btn_fsm_fxwrap">
+						<a href="javascript:;" class="btn_fsm">반려</a>
+						<a href="javascript:;" class="btn_fsm">승인</a>
+					</div>
+				</div>
+			</div>
 		</section>
 		<!-- // middle -->
 	</div>

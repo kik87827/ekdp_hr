@@ -243,9 +243,11 @@ input.form_input{font-family: 'NotoSans-Regular';color:#333;font-size:13px; font
 
 
 .props_form_item{display:flex;align-items: center;gap:10px;font-size:0;line-height:0;}
+.props_form_item.gap2{gap:5px;}
 input.props_form{width:18px;height:18px;appearance: none;border:1px solid #bbb; border-radius:100%;background:#fff url("../images/ico_checkbox.png") no-repeat 0 0/100% auto;}
 input.props_form:checked{background-position:0 100%; border-color:#2b8bf2; background-color:#2b8bf2;}
 .props_label{font-size:14px;color:#fff;display:inline-block;line-height:1;cursor: pointer;}
+.props_label_text{font-size:12px;color:#666;display:inline-block;line-height:1;cursor: pointer;}
 
 
 .center_form_message_row{margin-bottom:15px;}
@@ -384,6 +386,12 @@ input.props_form:checked{background-position:0 100%; border-color:#2b8bf2; backg
 .fvtb_w.thtype2 th{padding-left:35px;padding-right:35px;}
 .fvtb_w.dtype2 thead th{background:#f9f9f9;text-align:center;border-bottom:1px solid #d9d9d9;border-top:1px solid #d9d9d9;text-align: center;}
 
+.note_wrap{margin:15px 15px 0;}
+
+.bullet_para_list{}
+.bullet_para_list > li{position:relative;padding-left:8px;margin-bottom:5px;}
+.bullet_para_list > li:before{display:block;content:'';position:absolute;top:8px;left:0;width:3px;height:3px;background:#000;border-radius:100px;}
+.bullet_para_list > li:last-of-type{margin-bottom:0;}
 
 .fvtb{width:100%;}
 .fvtb.type2{table-layout: fixed;}
@@ -764,7 +772,7 @@ input.input_search:disabled{background:none;}
 .redimp *{color:#ff0000 !important;}
 
 
-.inline_item_group{display:flex;align-items: center;flex-wrap:wrap;}
+.inline_item_group{display:flex;align-items: center;flex-wrap:wrap;gap:5px 0;}
 .inline_item_group.has_break{flex-wrap:wrap;}
 .inline_item_group > *{margin-right:5px;}
 .inline_item_group > *:last-of-type{margin-right:0;}
@@ -777,12 +785,19 @@ input.input_search:disabled{background:none;}
 
 @media (max-width:500px){
 	.data_tb_z.type2 .data_tb{min-width:500px;}
+	
 }
 
 @media (max-width:400px){
 	.btn_text_obj{padding:0;font-size:0;line-height:0;display:flex;align-items: center;gap:5px;justify-content: center;}
 	.btn_text_obj .d_norsp{display:inline;font-size:12px;line-height:1;white-space: nowrap;}
 	.btn_text_obj .ico{position:static;transform: none;flex:0 0 11px;}
+}
+@media (max-width:374px){
+.inline_item_group.vtype2{flex-direction: column;}
+	.inline_item_group.vtype2 .inline_item_long,
+	.inline_item_group.vtype2 .inline_item_short,
+	.inline_item_group.vtype2 .inline_item{width:100%;}
 }
 /* // form */
 
