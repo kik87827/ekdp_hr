@@ -6,9 +6,8 @@ node_modules
 
 /node_modules
 
+.history
 
-
-/.history
 
 
 *.map
