@@ -283,7 +283,116 @@
 			</div>
 		</section>
 		<!-- // middle -->
+
+		<!-- layer -->
+		<div class="dlayer_w" id="extension_detail_popup">
+			<div class="dlayer_bg"></div>
+			<div class="dlayer_box">
+				<div class="dlayer_tit_low">
+					<h2 class="dlayer_tit">연장근무신청</h2>
+				</div>
+				<div class="dlayer_cont_low">
+					<div class="form_field_item_wrap">
+						<div class="form_field_item">
+							<div class="fvtb_w type3">
+								<table class="fvtb">
+									<tbody>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp">근무일자</span></th>
+											<td class="has_fitem">
+												<p class="fvdata">2025-05-23</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp">신청구분</span></th>
+											<td class="has_fitem">
+												<p class="fvdata">연장근로</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp">신청가능시간</span></th>
+											<td class="has_fitem">
+												<p class="fvdata">07:00 ~ 22:00</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp">주간한도 가능시간</span></th>
+											<td class="has_fitem">
+												<p class="fvdata">07:00 ~ 22:00</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp">주간실적 시간</span></th>
+											<td class="has_fitem">
+												<p class="fvdata">07:00 ~ 22:00</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp imp">근무시작시간</span></th>
+											<td class="has_fitem">
+												<ul class="inline_formitem_list">
+													<li>
+														<select class="dsel">
+															<option>선택</option>
+														</select>
+													</li>
+													<li class="has_else"><span class="fvelse">~</span></li>
+													<li>
+														<select class="dsel">
+															<option>선택</option>
+														</select>
+													</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp imp">근무종료시간</span></th>
+											<td class="has_fitem">
+												<ul class="inline_formitem_list">
+													<li>
+														<select class="dsel">
+															<option>선택</option>
+														</select>
+													</li>
+													<li class="has_else"><span class="fvelse">~</span></li>
+													<li>
+														<select class="dsel">
+															<option>선택</option>
+														</select>
+													</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp">신청사유</span></th>
+											<td class="has_fitem"><textarea class="fvta"></textarea></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="btn_fsm_w">
+								<a href="javascript:;" class="btn_fsm">저장</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // layer -->
+
 		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				// 퍼블 확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+				if (url_2 === "popup_01") {
+					dimLayerShow({
+						target: "#extension_detail_popup"
+					});
+				}
+			});
 			window.addEventListener("load", () => {
 				// scroll table
 				scrollTable();
