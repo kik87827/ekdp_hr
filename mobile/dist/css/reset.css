@@ -78,6 +78,8 @@ select::-ms-expand {display: none;}
 .pboth15{padding-left:15px !important; padding-right: 15px !important;}
 .dbsym{font-weight:500 !important;;color:#000 !important;}
 .mb40{margin-bottom: 40px !important;}
+.mb0{margin-bottom: 0px !important;}
+.mb_m1{margin-bottom: -1px !important;}
 .fl{float:left !important;}
 .align_left{text-align:left !important;}
 .align_right{text-align:right !important;}

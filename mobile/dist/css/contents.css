@@ -537,8 +537,10 @@ input.input_time:focus{border-color:#000;}
 
 input.input_time:disabled,
 input.input_time:read-only{background:#f7f7f7;color:#999999;opacity:1;}
-.d_wpsp{display:inline-block;white-space:nowrap;line-height:1;}
-.d_norsp{display:inline-block;line-height:1;}
+.d_wpsp{display:inline-block;white-space:nowrap;line-height:1;position:relative; font-size:11px;}
+.d_norsp{display:inline-block;line-height:1; font-size:11px;}
+.d_norsp.imp{position:relative;}
+.d_norsp.imp:after{display:block;content:'';width:3px;height:3px;background:#2b8bf2;border-radius:100%;position:absolute;top:6px;left:-6px;}
 .btn_text_obj{display:block;padding:0 15px;position:relative;}
 .btn_text_obj .d_norsp{}
 .btn_text_obj .ico{display:inline-block;vertical-align:middle;width:11px;position:absolute;top:50%;right:0;transform:translate(0,-50%);height:11px;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
@@ -619,6 +621,8 @@ select.dsel::-ms-expand {display: none;}
 }
 select.dsel:disabled{background-color:#f7f7f7;color:#999999;;opacity:1;}
 
+select.dsel.size2{padding:0 10px 0 5px;background-size:17px auto;min-width:20px; height:25px; font-size:11px; line-height:23px;}
+
 
 .btn_csm_w{text-align:right;margin:15px;font-size:0;line-height:0;display:flex;justify-content: flex-end;gap:5px;flex-wrap:wrap;}
 .btn_csm_w .btn_csm{margin:0;}
@@ -656,7 +660,7 @@ select.dsel:disabled{background-color:#f7f7f7;color:#999999;;opacity:1;}
 .data_tb.type2{table-layout: fixed;}
 .data_tb th{background-color:#f9f9f9;}
 .data_tb th,
-.data_tb td{border-bottom:1px solid #d9d9d9;color:#1b1b1b;font-size:12px;padding:7px 10px 7px;text-align:center;}
+.data_tb td{border-bottom:1px solid #d9d9d9;color:#1b1b1b;font-size:12px;padding:7px 7px 7px;text-align:center;}
 .data_tb th.has_norsp.type2{border-top:1px solid #d9d9d9}
 .data_tb th{padding-left:0;padding-right:0;}
 .data_tb th:last-of-type,
@@ -668,7 +672,8 @@ select.dsel:disabled{background-color:#f7f7f7;color:#999999;;opacity:1;}
 .data_tb tbody td.align_right{text-align: right;}
 .data_tb tbody td.has_ico{font-size:0;line-height:0;}
 .data_tb tbody th.ptype2{padding-top:0;padding-bottom:0;}
-.data_tb .has_wpsp{width:1px;padding-left:10px;padding-right:10px;}
+.data_tb tbody td.ptype2{padding:5px;}
+.data_tb .has_wpsp{width:1px;padding-left:7px;padding-right:7px;}
 .data_tb .has_wpsp.has_ico{width:25px !important;}
 .data_tb .has_wpsp.has_ico2{width:25px !important;}
 .data_tb .has_wpsp.has_btn{width:60px !important;}
