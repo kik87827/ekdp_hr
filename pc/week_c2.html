@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>무한 주간 달력</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #2f3cd3;
+      font-family: sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calendar {
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .nav-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      width: 40px;
+    }
+
+    .swiper {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5px;
+      box-sizing: border-box;
+    }
+
+    .day {
+      flex: 1;
+      text-align: center;
+    }
+
+    .day-name {
+      font-size: 12px;
+    }
+
+    .day-date {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 4px 0;
+    }
+
+    .today {
+      text-decoration: underline;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      background: red;
+      border-radius: 50%;
+      margin: 4px auto 0;
+    }
+
+    .inactive {
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="calendar">
+    <div class="header">
+      <button class="nav-btn" id="prevBtn">&lt;</button>
+      <div id="monthYear">Loading...</div>
+      <button class="nav-btn" id="nextBtn">&gt;</button>
+    </div>
+    <div class="swiper">
+      <div class="swiper-wrapper" id="weekWrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const weekWrapper = document.getElementById('weekWrapper');
+    const monthYearEl = document.getElementById('monthYear');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    const today = new Date();
+    let currentOffset = 0;
+
+    function getStartOfWeek(date) {
+      const d = new Date(date);
+      const day = d.getDay();
+      d.setDate(d.getDate() - day);
+      d.setHours(0, 0, 0, 0);
+      return d;
+    }
+
+    function getWeekDates(offset) {
+      const base = new Date();
+      base.setDate(base.getDate() + offset * 7);
+      const start = getStartOfWeek(base);
+      const dates = [];
+      for (let i = 0; i < 7; i++) {
+        const d = new Date(start);
+        d.setDate(start.getDate() + i);
+        dates.push(d);
+      }
+      return dates;
+    }
+
+    function buildSlide(offset) {
+      const week = getWeekDates(offset);
+      const monthLabel = week[0].toLocaleString('default', { month: 'long', year: 'numeric' });
+      monthYearEl.textContent = monthLabel;
+
+      const slide = document.createElement('div');
+      slide.className = 'swiper-slide';
+
+      week.forEach(date => {
+        const isToday = date.toDateString() === today.toDateString();
+        const isInactive = date.getMonth() !== week[3].getMonth();
+        slide.innerHTML += `
+          <div class="day ${isInactive ? 'inactive' : ''}">
+            <div class="day-name">${days[date.getDay()]}</div>
+            <div class="day-date ${isToday ? 'today' : ''}">${date.getDate()}</div>
+            <div class="dot"></div>
+          </div>
+        `;
+      });
+
+      return slide;
+    }
+
+    function renderSlides() {
+      weekWrapper.innerHTML = '';
+      for (let i = -1; i <= 1; i++) {
+        const slide = buildSlide(currentOffset + i);
+        weekWrapper.appendChild(slide);
+      }
+      swiper.slideTo(1, 0);
+      swiper.update();
+    }
+
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      allowTouchMove: true,
+      on: {
+        slideChange: function () {
+          if (this.activeIndex === 2) {
+            currentOffset++;
+            renderSlides();
+          } else if (this.activeIndex === 0) {
+            currentOffset--;
+            renderSlides();
+          }
+        }
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      swiper.slidePrev();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      swiper.slideNext();
+    });
+
+    renderSlides();
+  </script>
+</body>
+</html>
