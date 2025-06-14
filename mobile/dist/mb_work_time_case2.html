@@ -21,7 +21,7 @@
 		<header class="header_zone type3">
 			<a href="#" class="btn_top_home"><span class="hdtext">홈</span></a>
 
-			<h1 class="header_sub_title"><span class="header_sub_title_inner">근무표 수정(탄력적)</span></h1>
+			<h1 class="header_sub_title"><span class="header_sub_title_inner">근무표 수정(선택적)</span></h1>
 
 			<a href="#" class="btn_mobile_menu type2">
 				<div class="btn_mobile_menu_obj"></div>
@@ -72,10 +72,473 @@
 
 
 		<!-- middle -->
+		<!-- 퍼블에서 달력구현 불가 , 기획서 보이는데로 코딩만 전달 -->
 		<section class="middle_zone">
-			내용이 들어갑니다.
+			<div class="calendar_control_row">
+				<button class="btn_control_navi calendar_control prev"></button>
+				<span class="calendar_navi_fraction">2025년 5월</span>
+				<button class="btn_control_navi calendar_control next"></button>
+			</div>
+			<div class="form_render_search_row">
+				<div class="fvtb_w type3 intype2">
+					<table class="fvtb">
+						<tbody>
+							<tr>
+								<th class="has_fvth_sp"><span class="fvth_sp imp">기준근로시간</span></th>
+								<td class="has_fitem">
+									<input type="text" class="fvint acenter" />
+								</td>
+								<th class="has_fvth_sp"><span class="fvth_sp imp">계획근로시간</span></th>
+								<td class="has_fitem">
+									<input type="text" class="fvint acenter" />
+								</td>
+							</tr>
+							<tr>
+								<th class="has_fvth_sp"><span class="fvth_sp imp">누적근로시간</span></th>
+								<td class="has_fitem">
+									<input type="text" class="fvint acenter" />
+								</td>
+								<th class="has_fvth_sp"><span class="fvth_sp imp">잔여근로시간</span></th>
+								<td class="has_fitem">
+									<input type="text" class="fvint acenter" />
+								</td>
+							</tr>
+							<tr>
+								<th class="has_fvth_sp"><span class="fvth_sp imp">3개월 주 <br />평균 근로시간</span></th>
+								<td class="has_fitem" colspan="3">
+									<input type="text" class="fvint acenter" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="calender_submit_row">
+				<ul class="submit_item_list">
+					<li>
+						<select class="dsel">
+							<option>일괄적용 08:30</option>
+						</select>
+					</li>
+					<li class="short"><a href="javascript:;" class="btn_csm">저장</a></li>
+				</ul>
+			</div>
+			<div class="calender_render_row">
+				<div class="calendar_render_wrap">
+					<table class="calendar_render_table">
+						<thead>
+							<tr>
+								<th><span class="cc_week_text">월</span></th>
+								<th><span class="cc_week_text">화</span></th>
+								<th><span class="cc_week_text">수</span></th>
+								<th><span class="cc_week_text">목</span></th>
+								<th><span class="cc_week_text">금</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row rest">
+											<span class="cc_date_text">01</span>
+											<span class="cc_message_text">근로자의 날</span>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row rest">
+											<span class="cc_date_text">02</span>
+											<span class="cc_message_text">권장휴가</span>
+										</div>
+										<div class="cc_mark_row">
+											<div class="cc_mark_item">
+												<span class="cc_mark_dot" style="background:#4aa5fc"></span>
+												<span class="cc_mark_label">휴가</span>
+											</div>
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row rest">
+											<span class="cc_date_text">05</span>
+											<span class="cc_message_text">어린이날</span>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row rest">
+											<span class="cc_date_text">06</span>
+											<span class="cc_message_text">대체휴일</span>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">07</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">08</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">09</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">12</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">13</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">14</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">15</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">16</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">19</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">20</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">21</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">22</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">23</span>
+										</div>
+										<div class="cc_mark_row">
+											<div class="cc_mark_item">
+												<span class="cc_mark_dot" style="background:#4aa5fc"></span>
+												<span class="cc_mark_label">휴가</span>
+											</div>
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">26</span>
+										</div>
+										<div class="cc_mark_row">
+											<div class="cc_mark_item">
+												<span class="cc_mark_dot" style="background:#1977d2"></span>
+												<span class="cc_mark_label">출장</span>
+											</div>
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">27</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">28</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">29</span>
+										</div>
+										<div class="cc_mark_row">
+
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+								<td>
+									<a href="javascript:;" class="cal_cell_item">
+										<div class="cc_date_row">
+											<span class="cc_date_text">30</span>
+										</div>
+										<div class="cc_mark_row">
+										</div>
+										<div class="cc_time_row">
+											<p class="cc_time">08:30</p>
+											<p class="cc_time">17:30</p>
+											<div class="cc_total">8H</div>
+										</div>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</section>
+		<!-- // 퍼블에서 달력구현 불가 , 기획서 보이는데로 코딩만 전달 -->
 		<!-- // middle -->
+
+		<!-- layer -->
+		<div class="dlayer_w" id="calendar_layer">
+			<div class="dlayer_bg"></div>
+			<div class="dlayer_popupbox_zone">
+				<div class="dlayer_popupbox_wrap">
+					<div class="dlayer_popupbox_td">
+						<div class="dlayer_popupbox">
+							<div class="dlayer_tit_low">
+								<h2 class="dlayer_tit">근무시간 설정</h2>
+							</div>
+							<div class="dlayer_cont_low">
+								<div class="fvtb_w type3">
+									<table class="fvtb">
+										<tbody>
+											<tr>
+												<th class="has_fvth_sp"><span class="fvth_sp">근무형태</span></th>
+												<td class="has_fitem">
+													<p class="fvdata">휴가</p>
+												</td>
+											</tr>
+											<tr>
+												<th class="has_fvth_sp"><span class="fvth_sp">근무시작</span></th>
+												<td class="has_fitem">
+													<select class="dsel">
+														<option>08:30</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<th class="has_fvth_sp"><span class="fvth_sp">주간한도 가능시간</span></th>
+												<td class="has_fitem">
+													<select class="dsel">
+														<option>17:30</option>
+													</select>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="btn_fsm_w">
+									<a href="javascript:;" class="btn_fsm">적용</a>
+								</div>
+							</div>
+							<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // layer -->
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				// 퍼블 확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+				if (url_2 === "layer") {
+					dimLayerShow({
+						target: "#calendar_layer"
+					});
+				}
+			});
+		</script>
 	</div>
 </body>
 
