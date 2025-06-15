@@ -1035,7 +1035,7 @@ input.datapicker_inform{ line-height:1; height:26px; box-sizing: border-box; pad
   background-image: -webkit-linear-gradient( 0deg, rgb(74,165,252) 30%, rgb(99,139,255) 87%);
   background-image: -ms-linear-gradient( 0deg, rgb(74,165,252) 30%, rgb(99,139,255) 87%);
 }
-.worktime_tb tbody td{border-right:1px solid #e7e7e7; border-bottom:1px solid #e7e7e7;vertical-align: top;position:relative;}
+.worktime_tb tbody td{border-right:1px solid #e7e7e7; border-bottom:1px solid #e7e7e7;vertical-align: top;position:relative;padding-top:2px;}
 .worktime_tb tbody td:last-of-type{border-right: 0;}
 .worktime_tb tbody td.sat .wt_date_item{color:#6060d6;}
 .worktime_tb tbody td.sun .wt_date_item{color:#d13249;}
@@ -1049,7 +1049,7 @@ input.datapicker_inform{ line-height:1; height:26px; box-sizing: border-box; pad
 .wt_block.wt_type{padding:0 8px;}
 .wt_block.wt_time{padding:0 8px;}
 .wt_block.wt_time .form_select{}
-.wt_block.wt_total{background:#f5faff;}
+.wt_block.wt_total{background:#f5faff;margin-top:9px;}
 .wt_total_text{color:#4e4e4e; font-size:13px;}
 .wt_tdtext{color:#4e4e4e; font-size:13px;}
 .wt_ca_text{}
