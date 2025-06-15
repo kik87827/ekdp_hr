@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>무한 주간 달력 다중 사용</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #2f3cd3;
+      font-family: sans-serif;
+      color: white;
+      padding: 20px;
+    }
+
+    .calendar {
+      max-width: 420px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .nav-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      width: 40px;
+    }
+
+    .swiper {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5px;
+      box-sizing: border-box;
+    }
+
+    .day {
+      flex: 1;
+      text-align: center;
+    }
+
+    .day-name {
+      font-size: 12px;
+    }
+
+    .day-date {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 4px 0;
+    }
+
+    .today {
+      text-decoration: underline;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      background: red;
+      border-radius: 50%;
+      margin: 4px auto 0;
+    }
+
+    .inactive {
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 여러 달력 컨테이너 -->
+  <div class="calendar-container"></div>
+  <div class="calendar-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    function initCalendar(container) {
+      const calendar = document.createElement('div');
+      calendar.className = 'calendar';
+      calendar.innerHTML = `
+        <div class="header">
+          <button class="nav-btn prevBtn">&lt;</button>
+          <div class="monthYear">Loading...</div>
+          <button class="nav-btn nextBtn">&gt;</button>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper weekWrapper"></div>
+        </div>
+      `;
+      container.appendChild(calendar);
+
+      const weekWrapper = calendar.querySelector('.weekWrapper');
+      const monthYearEl = calendar.querySelector('.monthYear');
+      const prevBtn = calendar.querySelector('.prevBtn');
+      const nextBtn = calendar.querySelector('.nextBtn');
+
+      const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+      const today = new Date();
+      let currentOffset = 0;
+
+      function getStartOfWeek(date) {
+        const d = new Date(date);
+        d.setDate(d.getDate() - d.getDay());
+        d.setHours(0, 0, 0, 0);
+        return d;
+      }
+
+      function getWeekDates(offset) {
+        const base = new Date();
+        base.setDate(base.getDate() + offset * 7);
+        const start = getStartOfWeek(base);
+        return Array.from({ length: 7 }, (_, i) => {
+          const d = new Date(start);
+          d.setDate(start.getDate() + i);
+          return d;
+        });
+      }
+
+      function buildSlide(offset) {
+        const week = getWeekDates(offset);
+        const baseMonth = week[3].getMonth();
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        /* slide.innerHTML = week.map(date => {
+          const isToday = date.toDateString() === today.toDateString();
+          const isInactive = date.getMonth() !== baseMonth;
+          return `
+            <div class="day ${isInactive ? 'inactive' : ''}">
+              <div class="day-name">${days[date.getDay()]}</div>
+              <div class="day-date ${isToday ? 'today' : ''}">${date.getDate()}</div>
+              <div class="dot"></div>
+            </div>
+          `;
+        }).join(''); */
+        week.forEach(date => {
+          const isToday = date.toDateString() === today.toDateString();
+          const isInactive = date.getMonth() !== baseMonth;
+          const extraHtml = renderExtra(date); // 추가 HTML 삽입 부분
+
+          slide.innerHTML += `
+            <div class="day ${isInactive ? 'inactive' : ''}">
+              <div class="day-name">${days[date.getDay()]}</div>
+              <div class="day-date ${isToday ? 'today' : ''}">${date.getDate()}</div>
+              ${extraHtml}
+            </div>
+          `;
+        });
+        return slide;
+      }
+
+      function renderExtra(date) {
+        const yyyyMMdd = date.toISOString().slice(0, 10); // 예: '2025-06-14'
+
+        const specialDates = {
+          '2025-06-14': '<div class="dot" style="background: lime;"></div>',
+          '2025-06-15': '<div class="dot" style="background: orange;"></div><div style="font-size:10px;">할일 있음</div>'
+        };
+
+        return specialDates[yyyyMMdd] || '<div class="dot"></div>'; // 기본 점 포함
+      }
+
+      function updateMonthLabel() {
+        const baseDate = getWeekDates(currentOffset)[3];
+        monthYearEl.textContent = baseDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+      }
+
+      function renderSlides() {
+        weekWrapper.innerHTML = '';
+        for (let i = -1; i <= 1; i++) {
+          weekWrapper.appendChild(buildSlide(currentOffset + i));
+        }
+        swiper.slideTo(1, 0);
+        swiper.update();
+        updateMonthLabel();
+      }
+
+      const swiper = new Swiper(weekWrapper.parentElement, {
+        slidesPerView: 1,
+        allowTouchMove: false, // 터치 드래그 비활성화
+        on: {
+          slideChange: function () {
+            if (this.activeIndex === 2) {
+              currentOffset++;
+              renderSlides();
+            } else if (this.activeIndex === 0) {
+              currentOffset--;
+              renderSlides();
+            }
+          }
+        }
+      });
+
+      prevBtn.addEventListener('click', () => swiper.slidePrev());
+      nextBtn.addEventListener('click', () => swiper.slideNext());
+
+      renderSlides();
+    }
+
+    // 여러 달력 인스턴스 초기화
+    document.querySelectorAll('.calendar-container').forEach(el => {
+      initCalendar(el);
+    });
+  </script>
+</body>
+</html>

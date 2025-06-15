@@ -354,12 +354,887 @@
 						</div> -->
 					</div>
 					<div class="sub_cbox_container">
-						내용
+						<!-- 내용 -->
+						<div class="search_form_box">
+							<ul class="search_form_item_list">
+								<li>
+									<div class="search_form_item">
+										<div class="key_cols"><span class="search_form_key">기준일</span></div>
+										<div class="liquid_cols">
+											<ul class="inline_form_list items_type">
+												<li>
+													<div class="datepicker_item" style="width:130px">
+														<input type="text" class="form_input datepicker">
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="search_form_item">
+										<div class="key_cols"><span class="search_form_key">사원</span></div>
+										<div class="liquid_cols">
+											<ul class="inline_dom_list">
+												<li><input type="text" class="form_input" style="width:80px" value="E8471"></li>
+												<li><input type="text" class="form_input" style="width:80px" value="광동제약" disabled></li>
+												<li><input type="text" class="form_input" style="width:80px" value="광동제약" disabled></li>
+												<li><button class="btn_inline_search"><span class="hdtext">검색</span></button></li>
+												<li><a href="#" class="btn_box skin2"><span class="btn_box_text">조회</span></a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!-- <table class="search_form_tb">
+								<tr>
+									<th><span class="search_form_key">기준일</span></th>
+									<td>
+										<ul class="inline_form_list items_type gap_type2">
+											<li>
+												<div class="datepicker_item" style="width:130px">
+													<input type="text" class="form_input datepicker">
+												</div>
+											</li>
+											<li>
+												<a href="#" class="btn_box"><span class="btn_box_text">조회</span></a>
+											</li>
+										</ul>
+									</td>
+									<th><span class="search_form_key">사원</span></th>
+									<td>
+										<ul class="inline_form_list items_type gap_type2">
+											<li>
+												<input type="text" class="form_input" style="width:80px" value="E8471">
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</table> -->
+						</div>
+
+
+						<div class="worktime_render_zone">
+							<div class="calendar_navi_row">
+								<a href="javascript:;" class="btn_calendar_navi prev"></a>
+								<div class="calendar_navi_fraction">2025.09</div>
+								<a href="javascript:;" class="btn_calendar_navi next"></a>
+							</div>
+							<div class="search_form_box type2">
+								<div class="search_form_flex_container">
+									<div class="liquid_cols">
+										<ul class="search_form_item_list gap2">
+											<li>
+												<div class="search_form_item">
+													<div class="key_cols"><span class="search_form_key">기준근로시간</span></div>
+													<div class="liquid_cols">
+														<input type="text" class="form_input" style="width:60px" value="152">
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="search_form_item">
+													<div class="key_cols"><span class="search_form_key">계획근로시간</span></div>
+													<div class="liquid_cols">
+														<input type="text" class="form_input" style="width:60px" value="152">
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="search_form_item">
+													<div class="key_cols"><span class="search_form_key">누적근로시간</span></div>
+													<div class="liquid_cols">
+														<input type="text" class="form_input" style="width:60px" value="152">
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="search_form_item">
+													<div class="key_cols"><span class="search_form_key">잔여근로시간</span></div>
+													<div class="liquid_cols">
+														<input type="text" class="form_input" style="width:60px" value="152">
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="search_form_item">
+													<div class="key_cols"><span class="search_form_key">3개월 주 평균 근로시간</span></div>
+													<div class="liquid_cols">
+														<input type="text" class="form_input" style="width:60px" value="152">
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="auto_cols">
+										<ul class="search_form_item_list gap2">
+											<li>
+												<div class="search_form_item">
+													<div class="key_cols"><span class="search_form_key">일괄적용</span></div>
+													<div class="liquid_cols">
+														<ul class="inline_dom_list">
+															<li><select class="form_select"><option>08:30</option></select></li>
+															<li><a href="#" class="btn_box skin2"><span class="btn_box_text">저장</span></a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="worktime_tb_wrap">
+								<table class="worktime_tb">
+									<thead>
+										<tr>
+											<th rowspan="2"><span class="worktime_thtext">구분</span></th>
+											<th rowspan="2"><span class="worktime_thtext">일</span></th>
+											<th rowspan="2"><span class="worktime_thtext">월</span></th>
+											<th rowspan="2"><span class="worktime_thtext">화</span></th>
+											<th rowspan="2"><span class="worktime_thtext">수</span></th>
+											<th rowspan="2"><span class="worktime_thtext">목</span></th>
+											<th rowspan="2"><span class="worktime_thtext">금</span></th>
+											<th rowspan="2"><span class="worktime_thtext">토</span></th>
+											<th colspan="2"><span class="worktime_thtext">주간통계</span></th>
+										</tr>
+										<tr>
+											<th><span class="worktime_thtext">합계(주)</span></th>
+											<th><span class="worktime_thtext">평균(일)</span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"><span class="wt_ca_text">근무형태</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">근무일정</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">시작시간</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">종료시간</span></div>
+													<div class="wt_block wt_total"><span class="wt_ca_text">일근로시간</span></div>
+												</div>
+											</td>
+											<td class="sun">
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td class="rest">
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">01</span>
+															<span class="wt_date_caption">근로자의날</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">02</span>
+															<span class="wt_date_caption">권장휴가</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type">
+														<div class="wt_mark_item_list">
+															<div class="wt_mark_item">
+																<span class="wt_mark_dot" style="background-color:#4aa5fc"></span>
+																<div class="wt_mark_text">휴가</div>
+															</div>
+															<div class="wt_mark_item">
+																<span class="wt_mark_dot" style="background-color:#1977d2"></span>
+																<div class="wt_mark_text">출장</div>
+															</div>
+														</div>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled><option>일반근무</option></select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled><option>08:30</option></select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled><option>17:30</option></select>
+													</div>
+													<div class="wt_block wt_total">
+														<span class="wt_total_text">8H</span>
+													</div>
+												</div>
+											</td>
+											<td class="sat">
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">03</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td class="total"><p class="wt_tdtext">8H</p></td>
+											<td class="total"><p class="wt_tdtext">8H</p></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"><span class="wt_ca_text">근무형태</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">근무일정</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">시작시간</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">종료시간</span></div>
+													<div class="wt_block wt_total"><span class="wt_ca_text">일근로시간</span></div>
+												</div>
+											</td>
+											<td class="sun">
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">04</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td class="rest">
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">05</span>
+															<span class="wt_date_caption">어린이날</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td class="rest">
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">06</span>
+															<span class="wt_date_caption">대체휴일</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">07</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type">
+														<div class="wt_mark_item_list">
+															<div class="wt_mark_item">
+																<span class="wt_mark_dot" style="background-color:#4aa5fc"></span>
+																<div class="wt_mark_text">휴가</div>
+															</div>
+														</div>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2"><option>일반근무</option></select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2"><option>08:30</option></select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2"><option>17:30</option></select>
+													</div>
+													<div class="wt_block wt_total">
+														<span class="wt_total_text">8H</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">08</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2"><option>일반근무</option></select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled>
+															<option>08:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled>
+															<option>17:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_total">
+														<span class="wt_total_text">8H</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">09</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2"><option>일반근무</option></select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled>
+															<option>08:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled>
+															<option>17:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_total">
+														<span class="wt_total_text">8H</span>
+													</div>
+												</div>
+											</td>
+											<td class="sat">
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">10</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td class="total"><p class="wt_tdtext">24H</p></td>
+											<td class="total"><p class="wt_tdtext">8H</p></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"><span class="wt_ca_text">근무형태</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">근무일정</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">시작시간</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">종료시간</span></div>
+													<div class="wt_block wt_total"><span class="wt_ca_text">일근로시간</span></div>
+												</div>
+											</td>
+											<td class="sun">
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">11</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">12</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type">
+														<div class="wt_mark_item_list">
+															<div class="wt_mark_item">
+																<span class="wt_mark_dot" style="background-color:#4aa5fc"></span>
+																<div class="wt_mark_text">휴가</div>
+															</div>
+														</div>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2"><option>일반근무</option></select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled>
+															<option>08:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled>
+															<option>17:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_total">
+														<span class="wt_total_text">8H</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">13</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type">
+														<div class="wt_mark_item_list">
+															<div class="wt_mark_item">
+																<span class="wt_mark_dot" style="background-color:#4aa5fc"></span>
+																<div class="wt_mark_text">휴가</div>
+															</div>
+														</div>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2"><option>일반근무</option></select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled>
+															<option>08:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled>
+															<option>17:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_total">
+														<span class="wt_total_text">8H</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">14</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type">
+														<div class="wt_mark_item_list">
+															<div class="wt_mark_item">
+																<span class="wt_mark_dot" style="background-color:#4aa5fc"></span>
+																<div class="wt_mark_text">휴가</div>
+															</div>
+														</div>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2"><option>일반근무</option></select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2">
+															<option>08:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2">
+															<option>17:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_total">
+														<span class="wt_total_text">8H</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">15</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type">
+														<div class="wt_mark_item_list">
+															<div class="wt_mark_item">
+																<span class="wt_mark_dot" style="background-color:#4aa5fc"></span>
+																<div class="wt_mark_text">휴가</div>
+															</div>
+														</div>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2"><option>일반근무</option></select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled>
+															<option>08:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled>
+															<option>17:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_total">
+														<span class="wt_total_text">8H</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">16</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type">
+														<div class="wt_mark_item_list">
+															<div class="wt_mark_item">
+																<span class="wt_mark_dot" style="background-color:#4aa5fc"></span>
+																<div class="wt_mark_text">휴가</div>
+															</div>
+														</div>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2"><option>일반근무</option></select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled>
+															<option>08:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_time">
+														<select class="form_select size2" disabled>
+															<option>17:30</option>
+														</select>
+													</div>
+													<div class="wt_block wt_total">
+														<span class="wt_total_text">8H</span>
+													</div>
+												</div>
+											</td>
+											<td class="sat">
+												<div class="worktime_item">
+													<div class="wt_block wt_contents">
+														<div class="wt_date_item">
+															<span class="wt_date_number">17</span>
+														</div>
+													</div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td class="total"><p class="wt_tdtext">40H</p></td>
+											<td class="total"><p class="wt_tdtext">8H</p></td>
+										</tr>
+										<!-- <tr>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"><span class="wt_ca_text">근무형태</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">시작시간</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">종료시간</span></div>
+													<div class="wt_block wt_total"><span class="wt_ca_text">일근로시간</span></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td class="total"><p class="wt_tdtext">8H</p></td>
+											<td class="total"><p class="wt_tdtext">8H</p></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"><span class="wt_ca_text">근무형태</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">시작시간</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">종료시간</span></div>
+													<div class="wt_block wt_total"><span class="wt_ca_text">일근로시간</span></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td class="total"><p class="wt_tdtext">8H</p></td>
+											<td class="total"><p class="wt_tdtext">8H</p></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"><span class="wt_ca_text">근무형태</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">시작시간</span></div>
+													<div class="wt_block wt_time"><span class="wt_ca_text">종료시간</span></div>
+													<div class="wt_block wt_total"><span class="wt_ca_text">일근로시간</span></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td>
+												<div class="worktime_item">
+													<div class="wt_block wt_contents"></div>
+													<div class="wt_block wt_type"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_time"></div>
+													<div class="wt_block wt_total"></div>
+												</div>
+											</td>
+											<td class="total"><p class="wt_tdtext">8H</p></td>
+											<td class="total"><p class="wt_tdtext">8H</p></td>
+										</tr> -->
+									</tbody>
+								</table>
+							</div>
+							<div class="mark_guide_row">
+								<ul class="mark_guide_list">
+									<li>
+										<div class="wt_mark_item">
+											<span class="wt_mark_dot" style="background-color:#4aa5fc"></span>
+											<div class="wt_mark_text">휴가</div>
+										</div>
+									</li>
+									<li>
+										<div class="wt_mark_item">
+											<span class="wt_mark_dot" style="background-color:#1977d2"></span>
+											<div class="wt_mark_text">출장</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- // 내용 -->
 					</div>
 				</div>
 			</section>
 			<script>
 				H5.tabDrag("#sctab_container");
+				H5.datepicker();
 			</script>
 			<!-- // middle -->
 		</div>

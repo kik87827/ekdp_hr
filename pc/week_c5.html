@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1680" />
+	<link rel="stylesheet" href="./assets/css/reset.css" />
+	<link rel="stylesheet" href="./assets/css/jqueryui.css" />
+	<link rel="stylesheet" href="./assets/css/swiper.min.css" />
+	<link rel="stylesheet" href="./assets/css/layout.css" />
+	<link rel="stylesheet" href="./assets/css/contents.css" />
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/swiper.min.js"></script>
+  <title>무한 주간 달력 다중 사용 (독립 데이터)</title>
+</head>
+<body>
+
+  <!-- 여러 달력 컨테이너 -->
+  <div class="week_calendar_zone">
+    <div class="week_day_tb_wrap">
+      <table class="week_day_tb">
+        <tr>
+          <th><span class="week_day_thtext sun">일</span></th>
+          <th><span class="week_day_thtext">월</span></th>
+          <th><span class="week_day_thtext">화</span></th>
+          <th><span class="week_day_thtext">수</span></th>
+          <th><span class="week_day_thtext">목</span></th>
+          <th><span class="week_day_thtext">금</span></th>
+          <th><span class="week_day_thtext">토</span></th>
+        </tr>
+      </table>  
+    </div>
+    <div class="week_calendar_container"></div>
+  </div>
+  <div class="week_calendar_zone">
+    <div class="week_day_tb_wrap">
+      <table class="week_day_tb">
+        <tr>
+          <th><span class="week_day_thtext sun">일</span></th>
+          <th><span class="week_day_thtext">월</span></th>
+          <th><span class="week_day_thtext">화</span></th>
+          <th><span class="week_day_thtext">수</span></th>
+          <th><span class="week_day_thtext">목</span></th>
+          <th><span class="week_day_thtext">금</span></th>
+          <th><span class="week_day_thtext">토</span></th>
+        </tr>
+      </table>  
+    </div>
+    <div class="week_calendar_container"></div>
+  </div>
+
+  <script>
+    function initCalendar(container, options = {}) {
+      const renderExtra = options.renderExtra || (() => '<div class="dot"></div>');
+
+      const week_calendar = document.createElement('div');
+      week_calendar.className = 'week_calendar';
+      week_calendar.innerHTML = `
+        <div class="week_header">
+          <button class="nav-btn prevBtn"></button>
+          <div class="monthYear">Loading...</div>
+          <button class="nav-btn nextBtn"></button>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper weekWrapper"></div>
+        </div>
+      `;
+      container.appendChild(week_calendar);
+
+      const weekWrapper = week_calendar.querySelector('.weekWrapper');
+      const monthYearEl = week_calendar.querySelector('.monthYear');
+      const prevBtn = week_calendar.querySelector('.prevBtn');
+      const nextBtn = week_calendar.querySelector('.nextBtn');
+
+      //const days = ['일', '월', '화', '수', '목', '금', '토'];
+      const today = new Date();
+      let currentOffset = 0;
+      let swiper;
+
+      function getStartOfWeek(date) {
+        const d = new Date(date);
+        d.setDate(d.getDate() - d.getDay());
+        d.setHours(0, 0, 0, 0);
+        return d;
+      }
+
+      function getWeekDates(offset) {
+        const base = new Date();
+        base.setDate(base.getDate() + offset * 7);
+        const start = getStartOfWeek(base);
+        return Array.from({ length: 7 }, (_, i) => {
+          const d = new Date(start);
+          d.setDate(start.getDate() + i);
+          return d;
+        });
+      }
+
+      function buildSlide(offset) {
+        const week = getWeekDates(offset);
+        const baseMonth = week[3].getMonth();
+        const slide = document.createElement('div');
+        const slideInner = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slideInner.className = 'day_tb';
+
+        week.forEach(date => {
+          const isToday = date.toDateString() === today.toDateString();
+          const isInactive = date.getMonth() !== baseMonth;
+          const extraHtml = renderExtra(date);
+
+          slideInner.innerHTML += `
+            <div class="day_item ${isInactive ? 'inactive' : ''}">
+              <div class="day-contents">
+                <div class="day-date-wrap"><div class="day-date ${isToday ? 'today' : ''}">${date.getDate()}</div></div>
+                ${extraHtml}
+              </div>
+            </div>
+          `;
+        });
+
+        slide.appendChild(slideInner);
+
+        return slide;
+      }
+
+      function updateMonthLabel() {
+        const baseDate = getWeekDates(currentOffset)[3];
+        monthYearEl.textContent = baseDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+      }
+
+      function renderSlides() {
+        weekWrapper.innerHTML = '';
+        for (let i = -1; i <= 1; i++) {
+          weekWrapper.appendChild(buildSlide(currentOffset + i));
+        }
+        swiper.update();
+        swiper.slideTo(1, 0);
+        updateMonthLabel();
+      }
+
+      swiper = new Swiper(week_calendar.querySelector('.swiper-container'), {
+        slidesPerView: 1,
+        initialSlide: 1,
+        touchRatio: 0,
+        speed : 0,
+        on: {
+          slideChangeTransitionEnd: function () {
+            if (this.activeIndex === 2) {
+              currentOffset++;
+              renderSlides();
+            } else if (this.activeIndex === 0) {
+              currentOffset--;
+              renderSlides();
+            }
+          }
+        }
+      });
+
+      prevBtn.addEventListener('click', () => swiper.slidePrev());
+      nextBtn.addEventListener('click', () => swiper.slideNext());
+
+      renderSlides();
+    }
+
+    // 각 달력에 대한 독립 데이터
+    const calendarData = [
+      {
+        '2025-06-14': `<div class='calendar_initem'>
+                          <a href='javascript:;' class='calendar_inrow'>
+                            <span class='calendar_mark_obj' style='background-color:#ffba00'></span>
+                            <span class='calendar_intext'>기념일:00명</span>
+                          </a>
+                          <a href='javascript:;' class='calendar_inrow'>
+                            <span class='calendar_mark_obj' style='background-color:#1977d2'></span>
+                            <span class='calendar_intext'>출장</span>
+                          </a>
+                          <a href='javascript:;' class='calendar_inrow'>
+                            <span class='calendar_mark_obj' style='background-color:#4aa5fc'></span>
+                            <span class='calendar_intext'>휴가</span>
+                          </a>
+                       </div>
+                      `
+        ,
+        '2025-06-15': `
+                       <div class='calendar_initem'>
+                          <a href='javascript:;' class='calendar_inrow'>
+                            <span class='calendar_mark_obj' style='background-color:#1977d2'></span>
+                            <span class='calendar_intext'>출장</span>
+                          </a>
+                          <a href='javascript:;' class='calendar_inrow'>
+                            <span class='calendar_mark_obj' style='background-color:#4aa5fc'></span>
+                            <span class='calendar_intext'>휴가</span>
+                          </a>
+                       </div>
+                       `
+      },
+      {
+        '2025-06-16': `<div class='calendar_initem'>
+                          <a href='javascript:;' class='calendar_inrow'>
+                            <span class='calendar_mark_obj' style='background-color:#1977d2'></span>
+                            <span class='calendar_intext'>출장</span>
+                          </a>
+                          <a href='javascript:;' class='calendar_inrow'>
+                            <span class='calendar_mark_obj' style='background-color:#4aa5fc'></span>
+                            <span class='calendar_intext'>휴가</span>
+                          </a>
+                       </div>
+                      `
+        ,
+        '2025-06-17': `
+                       <div class='calendar_initem'>
+                          <a href='javascript:;' class='calendar_inrow'>
+                            <span class='calendar_mark_obj' style='background-color:#1977d2'></span>
+                            <span class='calendar_intext'>출장</span>
+                          </a>
+                          <a href='javascript:;' class='calendar_inrow'>
+                            <span class='calendar_mark_obj' style='background-color:#4aa5fc'></span>
+                            <span class='calendar_intext'>휴가</span>
+                          </a>
+                       </div>
+                       `
+      }
+    ];
+
+    // 달력 각각 초기화
+    document.querySelectorAll('.week_calendar_container').forEach((el, index) => {
+      const data = calendarData[index] || {};
+      initCalendar(el, {
+        renderExtra: function (date) {
+          const yyyyMMdd = date.toISOString().slice(0, 10);
+          return data[yyyyMMdd] || '';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
