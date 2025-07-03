@@ -1487,7 +1487,7 @@ input.searchform_input {
 .cc_date_row.rest{}
 .cc_date_row.rest *{color:red;}
 .cc_date_text{white-space: nowrap;}
-.cc_message_text{}
+.cc_message_text{flex:1; word-break:break-all;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp:1;overflow: hidden;}
 .cc_mark_row{min-height:17px; display:flex; flex-wrap:wrap;padding:0 5px;}
 .cc_mark_item{display:flex; gap:5px; align-items: center;}
 .cc_mark_dot{width:5px;height:5px;border-radius:100%; display:inline-block;}
@@ -1495,3 +1495,10 @@ input.searchform_input {
 .cc_time_row{text-align: center;}
 .cc_time{min-height:17px; display:flex; text-align: center; justify-content: center;}
 .cc_total{min-height:17px; background:#f5faff;}
+
+
+.sub_ctab_row{position:relative;margin-top:15px;}
+.sub_ctab_list{position:relative;z-index:1;display:flex;}
+.sub_ctab_list > li{margin-right:-1px;flex:1}
+.sub_ctab{display:flex; background:#fff; border:1px solid #a3a5aa; min-height:42px;justify-content: center; align-items: center; font-weight:500; color:#333333; font-size:14px;}
+.sub_ctab.active{background:#4a586e;border-color:#4a586e; color:#fff;}
